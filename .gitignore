@@ -18,3 +18,8 @@ checkpoints/
 
 # wrangler scratch
 .wrangler/
+
+# overnight batch scratch (big / regenerable)
+pilot/results/sam_tiles/
+pilot/results/candidates_sam.gpkg
+pilot/results/batch_sam.pid
