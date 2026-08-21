@@ -1,0 +1,17 @@
+# python env
+env/
+__pycache__/
+*.pyc
+
+# model checkpoints (auto-download, ~375MB+)
+*.pth
+checkpoints/
+
+# large rasters — COGs live in the NYC_Maps repo (Git LFS), not here
+*.tif
+*.tiff
+*.tif.aux.xml
+
+# scratch
+.DS_Store
+*.log

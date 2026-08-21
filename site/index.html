@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map Reader — TimeWalk footprint-tracing toolset</title>
+<style>
+  :root {
+    --bg: #12141a; --panel: #1a1e27; --ink: #e8e6e0; --muted: #9aa3b2;
+    --accent: #e8b04b; --green: #6fce7e; --red: #e06a5a; --line: #2c3240;
+    --code-bg: #0d0f14;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#faf8f4; --panel:#fff; --ink:#22252c; --muted:#5c6470;
+            --accent:#a86c14; --line:#e2ddd2; --code-bg:#f0ede6; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font: 17px/1.65 Georgia, 'Times New Roman', serif; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+  h1 { font-size: 2.2rem; margin: 0 0 .5rem; letter-spacing: -.02em; }
+  h1 .tw { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 1.05rem; max-width: 40em; }
+  h2 { font-size: 1.45rem; margin: 3rem 0 1rem; color: var(--accent); }
+  h3 { font-size: 1.1rem; margin: 1.8rem 0 .6rem; }
+  a { color: var(--accent); }
+  p { max-width: 42em; }
+  code, pre { font: 0.83rem/1.5 ui-monospace, 'SF Mono', Menlo, monospace; }
+  code { background: var(--code-bg); padding: .12em .35em; border-radius: 4px; }
+  pre { background: var(--code-bg); border:1px solid var(--line); border-radius:8px;
+        padding: 1rem 1.2rem; overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size:.95rem; }
+  th, td { text-align:left; padding:.5rem .75rem; border-bottom:1px solid var(--line); }
+  th { color: var(--muted); font-weight:600; font-family: system-ui, sans-serif; font-size:.85rem;
+       text-transform: uppercase; letter-spacing:.05em; }
+  .tool { background: var(--panel); border:1px solid var(--line); border-radius:10px;
+          padding: 1rem 1.25rem; margin: .9rem 0; }
+  .tool b { font-family: system-ui, sans-serif; }
+  .tool .tag { font: .72rem/1 system-ui, sans-serif; text-transform:uppercase; letter-spacing:.06em;
+               color:var(--bg); background:var(--accent); border-radius:99px; padding:.25em .7em;
+               margin-left:.5em; vertical-align: 2px; }
+  figure { margin: 1.5rem 0; }
+  figure img { width:100%; border-radius:10px; border:1px solid var(--line); }
+  figcaption { color:var(--muted); font-size:.9rem; margin-top:.5rem; }
+  .legend span { display:inline-block; margin-right:1.2em; font-size:.9rem; }
+  .swatch { display:inline-block; width:.9em; height:.9em; border-radius:3px; vertical-align:-1px; margin-right:.35em; }
+  .note { border-left: 3px solid var(--accent); padding: .6rem 1rem; background: var(--panel);
+          border-radius: 0 8px 8px 0; margin: 1.2rem 0; }
+  ol.steps > li { margin-bottom: .9rem; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1><span class="tw">Map Reader</span> — tracing history off the page</h1>
+  <p class="sub">A TimeWalk toolset for turning georeferenced historical maps into
+  PostGIS building footprints, with SAM (Segment Anything) doing the tedious part
+  of tracing ink. Repo: <a href="https://k7oth9.gitea.cloud/TimeWalk/Map_Reader">TimeWalk/Map_Reader</a> on Gitea.</p>
+</header>
+
+<h2>What this is</h2>
+<p>TimeWalk rebuilds historical cities (Manhattan 1776, Philadelphia 1776, Boston…)
+in Unreal Engine. The geometry pipeline starts with a period map, georeferenced as a
+Cloud-Optimized GeoTIFF (COG), from which we trace individual building footprints into
+the <code>timewalk</code> PostGIS schema. Hand-tracing is accurate but slow — minutes
+per building, and colonial Philadelphia alone has thousands. Map Reader collects
+tooling that lets a segmentation model (Meta's SAM) do the outline work from a single
+click or box prompt, while a human stays in the loop for verification.</p>
+
+<h2>The tool landscape</h2>
+
+<div class="tool"><b>Geo-SAM (QGIS plugin)</b> <span class="tag">interactive</span><br>
+A QGIS plugin that runs SAM's image encoder <em>once</em> over a raster (offline,
+minutes), then gives near-instant (&lt;1s) interactive segmentation from point/box
+prompts inside QGIS. Best fit for the human-in-the-loop tracing workflow: click a
+building, get a polygon, accept or fix, next. <a href="https://github.com/coolzhao/Geo-SAM">github.com/coolzhao/Geo-SAM</a></div>
+
+<div class="tool"><b>samgeo / segment-geospatial (Python)</b> <span class="tag">scriptable</span><br>
+Qiusheng Wu's Python package wrapping SAM for geospatial rasters: handles
+georeferencing, batch prompts, tiling, and vectorization to GeoPackage/Shapefile.
+This is what powers our scripted pilot below — fully reproducible, no GUI needed.
+<a href="https://samgeo.gishub.org">samgeo.gishub.org</a></div>
+
+<div class="tool"><b>MapSAM</b> <span class="tag">research</span><br>
+A 2024 research effort fine-tuning SAM specifically for historical map feature
+extraction (buildings, roads, vineyards on Siegfried maps), using low-rank adaptation.
+Shows SAM fine-tuned on map ink significantly beats vanilla SAM — a future upgrade path
+once we have enough hand-traced training data. <a href="https://github.com/xue-xia/MapSAM">github.com/xue-xia/MapSAM</a></div>
+
+<div class="tool"><b>MapReader</b> <span class="tag">classification</span><br>
+Turing Institute library for computational analysis of large map corpora: cuts maps
+into patches and classifies them (railspace, buildings-present, etc.). Great for
+"where on 500 sheets is there building ink?" questions; not a footprint tracer.
+<a href="https://github.com/maps-as-data/MapReader">github.com/maps-as-data/MapReader</a></div>
+
+<div class="tool"><b>mapKurator</b> <span class="tag">text</span><br>
+University of Minnesota pipeline that detects and recognizes <em>text labels</em> on
+historical maps at scale (used on David Rumsey collection). Complements footprint
+tracing: street and owner names feed attribute columns, not geometry.
+<a href="https://github.com/machines-reading-maps/map-kurator-system">github.com/machines-reading-maps</a></div>
+
+<div class="tool"><b>NYPL Map Vectorizer</b> <span class="tag">legacy</span><br>
+The 2013-era open-source pipeline (GDAL/OpenCV/R) NYPL used to auto-vectorize fire
+insurance atlases into building polygons with crowdsourced cleanup. Pre-deep-learning
+but proved the concept and the human-verification loop we're copying.
+<a href="https://github.com/nypl-spacetime/map-vectorizer">github.com/nypl-spacetime/map-vectorizer</a></div>
+
+<h2>Pilot: 1762 Clarkson &amp; Biddle, Philadelphia</h2>
+<p>We ran the scripted samgeo flow against a map we had already hand-traced, so we
+could score the machine against human ground truth. Source raster:
+<code>tw_1762_philadelphia_map_clarkson_biddle_cog.tif</code> (EPSG:3857, 0.41&nbsp;m/px,
+our best-georeferenced Philadelphia sheet — median residual ~6&nbsp;m). Ground truth:
+hand-traced landmark parcels in PostGIS
+(<code>timewalk."1776_philadelphia_parcels_landmarks"</code>). Four landmarks that
+existed in 1762 were prompted with a padded box each (simulating a user dragging a
+rough box), on a 2298×1148&nbsp;px crop of the city core, SAM ViT-B on CPU (Mac&nbsp;mini).</p>
+
+<table>
+<tr><th>id</th><th>building</th><th>IoU</th><th>precision</th><th>recall</th><th>predict</th></tr>
+<tr><td>1</td><td>Pennsylvania State House / Independence Hall</td><td>0.220</td><td>0.349</td><td>0.374</td><td>0.08 s</td></tr>
+<tr><td>2</td><td>Christ Church</td><td>0.442</td><td>0.721</td><td>0.532</td><td>0.07 s</td></tr>
+<tr><td>13</td><td>High Street Market shambles</td><td>0.081</td><td>0.127</td><td>0.181</td><td>0.06 s</td></tr>
+<tr><td>19</td><td>Old Gaol and Work House (Old Stone Prison)</td><td>0.281</td><td>0.302</td><td>0.808</td><td>0.06 s</td></tr>
+<tr><td colspan="2"><b>mean</b></td><td><b>0.256</b></td><td colspan="3"></td></tr>
+</table>
+<p>Timing on CPU: one-time image encode ~5&nbsp;s per window, then
+<b>0.06–0.09&nbsp;s per building prompt</b>. (Box-only prompts scored mean IoU 0.186;
+adding the centroid point raised it to 0.256.)</p>
+
+<figure>
+  <img src="overlay.jpg" alt="1762 map crop with hand-traced footprints in green and SAM output in red">
+  <figcaption class="legend">
+    <span><span class="swatch" style="background:#6fce7e"></span>hand-traced ground truth</span>
+    <span><span class="swatch" style="background:#e06a5a"></span>SAM output (box prompt)</span>
+  </figcaption>
+</figure>
+
+<h3>Honest verdict</h3>
+<p>Mean IoU 0.256 is <b>too low for unattended auto-tracing</b>, and the reasons are
+instructive: SAM tends to grab a whole hatched block or street-length strip from one
+prompt; thin geometries (the market shambles is ~10&nbsp;px wide) lose most of their IoU
+to a few pixels of lateral offset; and for surviving buildings our ground truth is the
+modern OSM footprint <em>by policy</em>, which intentionally disagrees with the period
+ink SAM is tracing. The ~6&nbsp;m median georeferencing residual (~15&nbsp;px) shifts
+everything a little more.</p>
+<p>The <b>speed</b> result is the real finding: after a one-time ~5&nbsp;s encode,
+prompts return in under a tenth of a second on a CPU. That makes the interactive
+QGIS Geo-SAM flow genuinely viable — click a building, get a draft polygon instantly,
+fix its corners, accept. SAM is a <em>tracing accelerant</em>, not a tracer. Upgrade
+paths: the larger ViT-H checkpoint, negative points on neighboring buildings to split
+hatch blocks, and MapSAM-style fine-tuning on our own hand-traced pairs.</p>
+
+<h2>How to use it</h2>
+
+<h3>A. Interactive tracing in QGIS (Geo-SAM)</h3>
+<ol class="steps">
+  <li>Install the <a href="https://github.com/coolzhao/Geo-SAM">Geo-SAM plugin</a>
+  (QGIS ≥ 3.30; install <code>torch</code> + <code>torchgeo</code> into QGIS's Python first,
+  then copy the plugin into your QGIS plugins folder and enable it).</li>
+  <li>Load the COG in QGIS, then run <b>Geo-SAM Image Encoder</b> on the map (or a
+  clipped working area). This is the slow step — it saves encoder features to disk.</li>
+  <li>Open the <b>Geo-SAM Segmentation</b> panel, point it at the saved features, and
+  trace: left-click inside a building (foreground point), right-click to exclude
+  (background point), or drag a box. Press <kbd>S</kbd> to save each polygon.</li>
+  <li>Save the shapefile/GeoPackage, clean geometry (see policy below), and load to PostGIS.</li>
+</ol>
+
+<h3>B. Scripted batch flow (samgeo) — what the pilot ran</h3>
+<pre><code># 1. environment (Python ≥3.10)
+python3 -m venv env
+env/bin/pip install segment-geospatial torch torchvision
+
+# 2. crop a working window from the COG (bounds in EPSG:3857)
+gdal_translate -projwin XMIN YMAX XMAX YMIN \
+  tw_1762_philadelphia_map_clarkson_biddle_cog.tif crop.tif
+# (or rasterio: see pilot/crop.py — useful when brew gdal is broken)
+
+# 3. segment with box/point prompts and vectorize
+#    (full script: pilot/run_sam.py)
+python - &lt;&lt;'EOF'
+from samgeo import SamGeo
+sam = SamGeo(model_type="vit_b", automatic=False)   # checkpoint auto-downloads
+sam.set_image("crop.tif")                            # one-time encode
+masks, scores, _ = sam.predictor.predict(box=box_px, multimask_output=False)
+# vectorize mask -> polygons with rasterio.features.shapes (georeferenced)
+EOF
+
+# 4. score against ground truth / inspect
+python pilot/compare_iou.py
+</code></pre>
+
+<h3>C. Load results to PostGIS</h3>
+<pre><code>ogr2ogr -f PostgreSQL \
+  PG:"host=db.&lt;project&gt;.supabase.co port=5432 dbname=postgres user=postgres sslmode=require" \
+  pilot/results/sam_output.gpkg sam_footprints \
+  -nln timewalk.sam_footprint_candidates \
+  -nlt MULTIPOLYGON -t_srs EPSG:3857 -lco GEOMETRY_NAME=geom</code></pre>
+<p>Load into a <em>candidates</em> table, review in QGIS against the raster, then merge
+approved rows into the era parcel table.</p>
+
+<h2>Geometry policy (Sunil, 2026-08-19)</h2>
+<div class="note">
+<p><b>Demolished buildings:</b> trace the drawn ink on the aligned period raster
+(full plot for burial grounds/yards). <b>Surviving buildings:</b> use the true modern
+OSM footprint, even where the period ink disagrees — plate warp and schematic drawing
+make the ink less trustworthy than the standing building.</p>
+<p>Georeferencing standard for all new maps: dense (30+) label-verified GCPs, TPS warp,
+OSM road-overlay verification.</p>
+</div>
+
+<footer>
+  TimeWalk · <a href="https://k7oth9.gitea.cloud/TimeWalk/Map_Reader">Map_Reader repo</a> ·
+  <a href="https://wiki.timewalk.live">wiki.timewalk.live</a> · pilot run 2026-08-21, Mac mini (CPU)
+</footer>
+
+</div>
+</body>
+</html>
