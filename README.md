@@ -66,6 +66,32 @@ to `~/.cache/torch/hub/checkpoints/` on first run.
 (abseil dylib mismatch) — the pilot crops with `rasterio` instead
 (`pilot/crop.py`). QGIS also bundles working GDAL binaries.
 
+## Overnight candidate batch (full 1762 map)
+
+Two independent candidate generators run over the whole city-core extent of
+the 1762 COG, so review starts from draft polygons instead of a blank canvas
+(QGIS: load the GPKG over the COG, fix/delete/accept):
+
+- `pilot/batch_threshold.py` — no-ML NYPL-map-vectorizer-style baseline:
+  grayscale ink threshold (<165) + morphological close(3)/open(5),
+  polygonized per tile. Seconds to run. Output
+  `pilot/results/candidates_threshold.gpkg` (committed): layer `candidates`
+  plus layer `oversize_blocks` (contiguous rows/blocks over the 2000 m² cap —
+  useful to hand-split). Known noise: street-name lettering.
+- `pilot/batch_sam.py` — SAM automatic mask generation (ViT-H, 2.4 GB
+  checkpoint), 1024 px-stride tiles (SAM's internal resize is 1024 px, so
+  bigger tiles would lose map detail), masks must cover ≥35 % ink, per-tile
+  resumable checkpoints in `pilot/results/sam_tiles/`. ~70–90 s/tile on the
+  Mac mini CPU. Output `pilot/results/candidates_sam.gpkg` (not committed).
+
+Shared plumbing in `pilot/batch_common.py`: a hand-digitized city-core
+polygon (excludes the REFERENCES legend, the two Schuylkill inset maps, the
+cartouche, and the river/ships), blank-tile skip by ink density, tile
+ownership dedupe (each polygon kept by the tile whose stride cell contains
+its representative point; 128 px read margin so boundary buildings are never
+cut), and filters: keep 10–2000 m² (EPSG:3857 terms), drop slivers
+(min-rotated-rect width < 2 m or aspect > 12).
+
 ## Pilot: 1762 Clarkson & Biddle (Philadelphia)
 
 Scored SAM against 4 hand-traced landmarks

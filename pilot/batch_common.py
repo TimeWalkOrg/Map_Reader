@@ -32,9 +32,11 @@ MAX_ASPECT = 12.0        # max length/width of min rotated rectangle
 # City-core polygon, digitized on the /8 overview (preview px), clockwise
 # from 8th & Vine. Converted to map coords via the COG transform at import.
 _PREVIEW_PX = [
-    (240, 222),   # NW: 8th & Vine
-    (455, 210),   # Vine at legend bottom-right corner
-    (470, 45),    # legend right edge, top of built area
+    (240, 224),   # NW: 8th & Vine
+    (430, 236),   # along Vine, under the legend letter row
+    (484, 226),   # legend bottom-right corner
+    (505, 130),   # legend right edge (script text reaches x~497)
+    (490, 42),    # legend right edge, top of built area
     (650, 155),   # NE corner: shore at north sheet edge
     (705, 240),   # Northern Liberties wharves bulge
     (685, 320),
