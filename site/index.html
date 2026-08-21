@@ -74,41 +74,67 @@ click or box prompt, while a human stays in the loop for verification.</p>
 
 <h2>The tool landscape</h2>
 
-<div class="tool"><b>Geo-SAM (QGIS plugin)</b> <span class="tag">interactive</span><br>
-A QGIS plugin that runs SAM's image encoder <em>once</em> over a raster (offline,
-minutes), then gives near-instant (&lt;1s) interactive segmentation from point/box
-prompts inside QGIS. Best fit for the human-in-the-loop tracing workflow: click a
-building, get a polygon, accept or fix, next. <a href="https://github.com/coolzhao/Geo-SAM">github.com/coolzhao/Geo-SAM</a></div>
+<div class="tool"><b>Geo-SAM (QGIS plugin)</b> <span class="tag">best immediate win</span><br>
+A QGIS plugin — in the <em>official</em> QGIS plugin repository — that runs SAM's image
+encoder <em>once</em> over a raster (offline, minutes), then gives near-instant (&lt;1&nbsp;s)
+interactive segmentation from point/box prompts inside QGIS, on CPU. v2 adds SAM2/SAM3
+backbones. Best fit for the human-in-the-loop workflow: click a building, get a polygon,
+accept or fix, next. No GPU, no training data.
+<a href="https://github.com/coolzhao/Geo-SAM">github.com/coolzhao/Geo-SAM</a></div>
 
-<div class="tool"><b>samgeo / segment-geospatial (Python)</b> <span class="tag">scriptable</span><br>
-Qiusheng Wu's Python package wrapping SAM for geospatial rasters: handles
-georeferencing, batch prompts, tiling, and vectorization to GeoPackage/Shapefile.
-This is what powers our scripted pilot below — fully reproducible, no GUI needed.
-<a href="https://samgeo.gishub.org">samgeo.gishub.org</a></div>
+<div class="tool"><b>MapSAM / MapSAM2</b> <span class="tag">path to automation</span><br>
+ETH Zurich research fine-tuning SAM specifically for historical map feature extraction
+(buildings, vineyards, railways on Siegfried maps). Crucially it is <b>prompt-free</b>:
+after fine-tuning it batch-extracts a whole sheet with no human clicking — the only route
+here to real automation rather than acceleration. Needs a GPU and annotated tiles, both
+reachable (PC-5090's RTX&nbsp;5090; tiles are the by-product of an interactive Geo-SAM pass).
+<a href="https://github.com/Xue-Xia/MapSAM">github.com/Xue-Xia/MapSAM</a> ·
+<a href="https://arxiv.org/abs/2411.06971">arXiv:2411.06971</a> ·
+<a href="https://arxiv.org/abs/2510.27547">arXiv:2510.27547</a></div>
 
-<div class="tool"><b>MapSAM</b> <span class="tag">research</span><br>
-A 2024 research effort fine-tuning SAM specifically for historical map feature
-extraction (buildings, roads, vineyards on Siegfried maps), using low-rank adaptation.
-Shows SAM fine-tuned on map ink significantly beats vanilla SAM — a future upgrade path
-once we have enough hand-traced training data. <a href="https://github.com/xue-xia/MapSAM">github.com/xue-xia/MapSAM</a></div>
+<div class="tool"><b>samgeo / segment-geospatial (Python)</b> <span class="tag">scriptable backbone</span><br>
+Qiusheng Wu's MIT-licensed Python package wrapping SAM for geospatial rasters: handles
+georeferencing, point/box prompts, tiling, batch runs, and vectorization to
+GeoPackage/Shapefile; a QGIS plugin was added in 2025. This powers our scripted pilot below
+— fully reproducible, no GUI needed. samgeo is the backbone; Geo-SAM is the cockpit.
+<a href="https://github.com/opengeos/segment-geospatial">github.com/opengeos/segment-geospatial</a></div>
 
-<div class="tool"><b>MapReader</b> <span class="tag">classification</span><br>
-Turing Institute library for computational analysis of large map corpora: cuts maps
-into patches and classifies them (railspace, buildings-present, etc.). Great for
-"where on 500 sheets is there building ink?" questions; not a footprint tracer.
+<div class="tool"><b>NYPL Map Vectorizer</b> <span class="tag">legacy baseline</span><br>
+The closest historical precedent: NYPL auto-vectorized fire-insurance atlases into
+<b>170,000+ building footprints</b> feeding the crowdsourced Building Inspector — same
+problem, same verification loop we're copying. Python-2 era and abandoned, so don't run it
+as-is; but its color-threshold&nbsp;→&nbsp;<code>gdal_polygonize</code> approach remains a
+valid <b>no-ML baseline</b> that can beat SAM on clean flat-color maps.
+<a href="https://github.com/nypl-spacetime/map-vectorizer">github.com/nypl-spacetime/map-vectorizer</a></div>
+
+<div class="tool"><b>MapReader</b> <span class="tag">corpus triage</span><br>
+Turing Institute library for analysis of large map corpora: cuts sheets into patches and
+<em>classifies</em> them (railspace, buildings-present). No polygons, so it can't do the core
+job — but it answers the step-earlier question of which sheets are worth georeferencing at
+all (the triage failure that burned us on the 1777 Pelham Boston map).
 <a href="https://github.com/maps-as-data/MapReader">github.com/maps-as-data/MapReader</a></div>
 
-<div class="tool"><b>mapKurator</b> <span class="tag">text</span><br>
+<div class="tool"><b>mapKurator</b> <span class="tag">text spotting</span><br>
 University of Minnesota pipeline that detects and recognizes <em>text labels</em> on
-historical maps at scale (used on David Rumsey collection). Complements footprint
-tracing: street and owner names feed attribute columns, not geometry.
-<a href="https://github.com/machines-reading-maps/map-kurator-system">github.com/machines-reading-maps</a></div>
+historical maps at scale (applied to the David Rumsey collection). Complements footprint
+tracing: street, place and owner names populate attribute columns for the geometry the SAM
+tools produce.
+<a href="https://github.com/knowledge-computing/mapkurator-system">github.com/knowledge-computing/mapkurator-system</a></div>
 
-<div class="tool"><b>NYPL Map Vectorizer</b> <span class="tag">legacy</span><br>
-The 2013-era open-source pipeline (GDAL/OpenCV/R) NYPL used to auto-vectorize fire
-insurance atlases into building polygons with crowdsourced cleanup. Pre-deep-learning
-but proved the concept and the human-verification loop we're copying.
-<a href="https://github.com/nypl-spacetime/map-vectorizer">github.com/nypl-spacetime/map-vectorizer</a></div>
+<h3>Ranked verdict</h3>
+<table>
+<tr><th>rank</th><th>tool</th><th>role</th><th>needs</th></tr>
+<tr><td>1</td><td><b>Geo-SAM</b></td><td>best immediate win — interactive tracing in QGIS, today</td><td>CPU only</td></tr>
+<tr><td>2</td><td><b>MapSAM/MapSAM2</b></td><td>path to full automation — prompt-free batch extraction</td><td>GPU + annotated tiles</td></tr>
+<tr><td>3</td><td><b>samgeo</b></td><td>scriptable backbone — reproducible runs, evaluation, glue</td><td>CPU only</td></tr>
+<tr><td>—</td><td>NYPL vectorizer</td><td>no-ML baseline worth comparing against; don't run as-is</td><td>legacy</td></tr>
+<tr><td>—</td><td>MapReader</td><td>corpus triage: which sheets are worth the effort</td><td>—</td></tr>
+<tr><td>—</td><td>mapKurator</td><td>attribute enrichment from map labels</td><td>—</td></tr>
+</table>
+<p><b>Recommended sequence:</b> run the interactive Geo-SAM pass now to get real footprints
+into PostGIS; keep every accepted polygon as a training pair; once enough accumulate,
+fine-tune MapSAM on PC-5090's RTX&nbsp;5090 with those pairs and move to prompt-free batch
+extraction; keep samgeo as the scripted layer that runs and scores both.</p>
 
 <h2>Pilot: 1762 Clarkson &amp; Biddle, Philadelphia</h2>
 <p>We ran the scripted samgeo flow against a map we had already hand-traced, so we
