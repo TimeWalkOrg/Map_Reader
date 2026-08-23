@@ -41,3 +41,40 @@ unattended auto-tracing.** Why the low scores:
 - Upgrade paths: ViT-H checkpoint (better masks, slower encode), MapSAM-style
   fine-tuning on our own hand-traced pairs, negative points on neighboring
   buildings to split hatch blocks.
+
+## Alignment verification (2026-08-23)
+
+Report: "pretty bad misalignment" between `candidates_threshold.gpkg` and the
+map ink in QGIS. Investigated with phase correlation (rasterized polygons vs
+binarized ink, 5 well-separated 1024 px windows across the city core).
+
+**Finding: there is no misalignment against the source raster.** Against
+`tw_1762_philadelphia_map_clarkson_biddle_cog.tif` (the COG the polygons were
+extracted from), measured offsets are dx,dy <= 0.02 px = **under 1 cm** in
+every window, vs both the morphed mask and the raw ink. The
+`src.window_transform(win)` -> `rasterio.features.shapes` pipeline is
+pixel-exact. Proof crops (green outlines over the raster):
+
+- `overlay_registration_2nd_market.png` (2nd & Market)
+- `overlay_registration_4th_chestnut.png` (4th & Chestnut / Willings Alley)
+- `overlay_registration_front_pine.png` (Front & Pine wharves)
+
+**Likely cause of the report:** overlaying these 1762-derived candidates on a
+*different* Philadelphia COG. Each historical map was independently
+GCP-warped, so they disagree with each other by a few meters, *non-uniformly*
+(varies in sign and magnitude across the sheet — it is a relative warp, not a
+constant translation, so no global shift can fix it). See
+`overlay_candidates_on_easburn1776v2.png`: the same polygons sit visibly a few
+meters off the Easburn 1776 ink — exactly the reported symptom. Reproduce
+measurements with `pilot/measure_offset.py` and `pilot/verify_alignment.py`.
+
+Practical notes for QGIS:
+- Compare `candidates_threshold.gpkg` only against
+  `tw_1762_philadelphia_map_clarkson_biddle_cog.tif` (local file must match
+  the NYC_Maps Gitea LFS copy).
+- Load **both** layers: `candidates` (10-2000 m2 shapes) *and*
+  `oversize_blocks` — contiguous hatched row-blocks larger than 2000 m2 live
+  in the second layer, so blocks can look "missing" if only `candidates` is
+  loaded. Note `candidates` still includes street-name letterforms and other
+  ink false-positives; it is a candidate layer, not a finished footprint
+  layer.
