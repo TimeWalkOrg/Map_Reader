@@ -12,8 +12,9 @@ import cv2
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import batch_common as bc
 
-GPKG = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                    "results", "candidates_threshold.gpkg")
+GPKG = (sys.argv[1] if len(sys.argv) > 1 else
+        os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                     "results", "candidates_threshold.gpkg"))
 
 src = rasterio.open(bc.COG)
 gdf = gpd.read_file(GPKG, layer="candidates")

@@ -23,3 +23,6 @@ checkpoints/
 pilot/results/sam_tiles/
 pilot/results/candidates_sam.gpkg
 pilot/results/batch_sam.pid
+
+# v4 exploration scratch (regenerable debug crops)
+pilot/scratch/

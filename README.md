@@ -92,6 +92,53 @@ its representative point; 128 px read margin so boundary buildings are never
 cut), and filters: keep 10–2000 m² (EPSG:3857 terms), drop slivers
 (min-rotated-rect width < 2 m or aspect > 12).
 
+## Refined candidate extraction (v3 → v4, 1762 map)
+
+`pilot/extract_candidates_v3.py` and `pilot/extract_candidates_v4.py`
+supersede the threshold baseline for the 1762 Clarkson & Biddle COG.
+Both use a structure-tensor **hatch-texture test** as the positive building
+signature (diagonal hatch fill separates buildings from lettering, trees,
+and ships), regularize footprints to the street grid (oriented rectangles /
+rectilinear polygons with courtyard holes), and clip to a hatch-anchored
+wharf-line core along the Delaware. Output layers: `candidates` (10–2000 m²)
+plus `oversize_blocks` (2000–50 000 m², for hand-splitting in review).
+
+**v4** (current, `pilot/results/candidates_v4.gpkg`, committed) addresses
+Sunil's 2026-08-27 QC screenshots on v3 — missed hatched buildings, merged
+blocks that should split at dark ink lines, and parcels overshooting onto
+streets/street lettering:
+
+1. **Recall** — the hatch gradient-orientation band was widened 140–165° →
+   138–174° (the full-sheet histogram peaks at 155–170°, so v3 clipped the
+   real peak) and the tensor energy floor lowered 4000 → 2500 for fine
+   hatching; small hatched houses of 45–80 m² are kept when hatch evidence
+   is strong. Any v3 candidate not covered by v4 output is carried over
+   verbatim (`reg_method='v3carry'`) so recall never regresses.
+2. **Dark-divider block splitting** — components > 350 m² are cut along
+   internal grid-aligned heavy dark linework (tensor orientation within ±8°
+   of the 9.5°/99.5° street-grid directions, coherent, gray < 135, filtered
+   by an oriented line-opening so hatch speckle can't cut). Pieces thinner
+   than 2.5 m are treated as a lengthwise-cut wall (diagonal/curved
+   buildings), not a divider, and absorbed. Pieces still over 2000 m² get a
+   relaxed second cut, then the v3 neck-split.
+3. **Ink clamp** — non-hatched appendages (attached street lines,
+   lettering) of 6–45 % of a piece are trimmed to the hatched core, and any
+   regularized polygon overhanging the source ink by > 7 % (beyond 1.2 m)
+   is intersected back with the ink outline (`reg_method` gains `+clamp`).
+   Low-solidity crescents along the curved Dock street (creek-bank shading,
+   script-word blobs) are rejected by solidity/MRR-fit gates.
+
+**Counts:** v3 552 candidates + 37 oversize blocks → **v4 688 candidates +
+27 oversize blocks** (89 hatched buildings newly captured, 0 v3 candidates
+lost, 38 polygons ink-clamped, 255 candidates born from divider splits).
+Registration sanity: `env/bin/python pilot/measure_offset.py
+pilot/results/candidates_v4.gpkg` phase-correlates at **median 0.01–0.03 m**
+offset vs the source ink. QC proof crops (v3 | v4 side-by-side):
+`pilot/results/qc_v4_*.png` (recall, divider splits, overshoot clamp,
+lettering clamp, Dock curved row). Re-run: `env/bin/python
+pilot/extract_candidates_v4.py` (~15 s); comparison renders:
+`pilot/render_v4_qc.py`.
+
 ## Pilot: 1762 Clarkson & Biddle (Philadelphia)
 
 Scored SAM against 4 hand-traced landmarks
