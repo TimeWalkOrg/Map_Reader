@@ -1,0 +1,16 @@
+You are auditing machine-extracted BUILDING-FOOTPRINT vectors drawn over a 1762 engraved map of Philadelphia (Clarkson & Biddle). You get TWO images of the SAME map area:
+- IMAGE 1 (RAW): the map crop with no overlay.
+- IMAGE 2 (OVERLAY): the identical crop with vector outlines: GREEN = building candidates, ORANGE = oversize blocks awaiting hand-split. Faint blue grid lines are drawn every 128 px with pixel labels on the top/left edges to help you report coordinates.
+
+MAP CONVENTIONS: buildings are shown as areas filled with fine parallel diagonal HATCH lines (lower-left to upper-right), occasionally as solid dark fills (public buildings). Streets are blank corridors, often carrying italic street-name LETTERING. Trees/orchards are small round scribbles; creeks and shading are wavy lines; dashed lines are lot boundaries, not buildings. RULE: parcels belong ONLY on hatched (or solid-filled) building areas.
+
+Report ONLY clear, decisive problems, using these categories:
+1. "missing_feature"  - a hatched/solid-filled building with NO green/orange outline over it (ignore anything smaller than ~10x10 px, tree scribbles, and hatching that is clearly water/shading along the river).
+2. "false_positive"   - an outline enclosing ONLY non-building content: street lettering, blank street/open ground, trees, water. (An outline that includes SOME hatching is NOT this category.)
+3. "shape_mismatch"   - an outline whose shape is clearly wrong for the hatched area it sits on: it overhangs far onto blank street/lettering (by >~25% of its area), is skewed/rotated relative to the hatched block, or misses a large part (>~25%) of its building's hatching.
+4. "missing_split"    - one single outline spanning what the map draws as TWO OR MORE distinct buildings/parcels separated by a clear straight dark ink line crossing the hatched block.
+
+Respond with STRICT JSON only (no markdown fences, no commentary):
+{"tile": "<TILE_ID>", "verdict": "ok" | "issues", "findings": [{"category": "...", "bbox_px": [x0, y0, x1, y1], "confidence": "high"|"medium"|"low", "note": "<max 15 words>"}]}
+
+bbox_px are pixel coordinates in the 704x704 images (use the blue grid: labels mark pixels). Be conservative: if unsure, either omit the finding or mark confidence "low". An empty findings list with verdict "ok" is a perfectly good answer. Do not report stylistic quibbles; only the four categories above. TILE_ID is: 

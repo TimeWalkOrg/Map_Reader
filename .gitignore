@@ -26,3 +26,6 @@ pilot/results/batch_sam.pid
 
 # v4 exploration scratch (regenerable debug crops)
 pilot/scratch/
+
+# v5 vision-audit tile renders (regenerable via pilot/audit_vision.py)
+pilot/results/audit_v5/tiles/

@@ -1,0 +1,1355 @@
+[
+ {
+  "tile": "T0907",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "orange outline covers mostly street lettering 'Carters Alley'",
+  "bbox": [
+   -8365167.8323234385,
+   4858362.729765572,
+   -8365051.281980824,
+   4858414.976470882
+  ],
+  "pass": 3,
+  "disposition": "fixed_delete",
+  "reason": "dark 0.70 non-rect",
+  "n_polys": 4
+ },
+ {
+  "tile": "T1008",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "outline follows curved street lettering, not building hatching",
+  "bbox": [
+   -8365024.354832701,
+   4858050.455226908,
+   -8364982.15557072,
+   4858128.825284875
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "real hatch rh=0.83",
+  "n_polys": 4
+ },
+ {
+  "tile": "T0807",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "orange outline over largely blank street/ground area",
+  "bbox": [
+   -8365151.756414113,
+   4858482.09339232,
+   -8365067.35789015,
+   4858518.264188304
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0506",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "green outline over STREET lettering blank area",
+  "bbox": [
+   -8365371.594474149,
+   4859306.385643025,
+   -8365345.471121494,
+   4859324.471041017
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0407",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "outline over street lettering, no clear hatching",
+  "bbox": [
+   -8365091.471754139,
+   4859457.901088425,
+   -8365071.3768674815,
+   4859480.005463748
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0908",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "small orange outline over blank ground",
+  "bbox": [
+   -8364962.060684062,
+   4858425.0239142105,
+   -8364937.946820073,
+   4858443.109312203
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0406",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "outline over STREET lettering",
+  "bbox": [
+   -8365359.537542154,
+   4859297.141995162,
+   -8365339.442655496,
+   4859317.23688182
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0409",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "outline over Keys alley lettering, minimal hatching",
+  "bbox": [
+   -8364676.71329352,
+   4859403.644894449,
+   -8364653.80512273,
+   4859419.720803775
+  ],
+  "pass": 3,
+  "disposition": "fixed_delete",
+  "reason": "dark 0.70 non-rect",
+  "n_polys": 1
+ },
+ {
+  "tile": "T1305",
+  "category": "false_positive",
+  "confidence": "medium",
+  "note": "thin outline over blank/lettering area, no hatching",
+  "bbox": [
+   -8365531.951669679,
+   4857599.927868039,
+   -8365507.034010223,
+   4857606.760129503
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no polygon mostly inside bbox"
+ },
+ {
+  "tile": "T0808",
+  "category": "missing_split",
+  "confidence": "medium",
+  "note": "orange block spans across Blackhorse Alley lettering corridor",
+  "bbox": [
+   -8364966.079661394,
+   4858530.3211202985,
+   -8364833.453409452,
+   4858564.482427617
+  ],
+  "pass": 3,
+  "disposition": "needs_review",
+  "reason": "no confident divider found"
+ },
+ {
+  "tile": "T0506",
+  "category": "missing_split",
+  "confidence": "medium",
+  "note": "orange spans multiple distinct hatched parcels",
+  "bbox": [
+   -8365423.841179459,
+   4859093.379844452,
+   -8365319.3477688385,
+   4859133.569617768
+  ],
+  "pass": 3,
+  "disposition": "needs_review",
+  "reason": "no confident divider found"
+ },
+ {
+  "tile": "T0908",
+  "category": "shape_mismatch",
+  "confidence": "medium",
+  "note": "large orange outline overhangs blank/lettering areas heavily",
+  "bbox": [
+   -8365010.288412041,
+   4858284.359707606,
+   -8364929.90886541,
+   4858376.796186232
+  ],
+  "pass": 3,
+  "disposition": "fixed_reshape",
+  "reason": "missed hatch 66% -> extended"
+ },
+ {
+  "tile": "T0807",
+  "category": "shape_mismatch",
+  "confidence": "low",
+  "note": "orange outline skewed along dashed lot boundary lettering",
+  "bbox": [
+   -8365071.3768674815,
+   4858490.131346983,
+   -8365023.149139502,
+   4858582.567825609
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "shape checks out (over=0%, missed=0%)"
+ },
+ {
+  "tile": "T0808",
+  "category": "shape_mismatch",
+  "confidence": "low",
+  "note": "outline overhangs alley street corridor",
+  "bbox": [
+   -8364933.927842741,
+   4858534.34009763,
+   -8364833.453409452,
+   4858566.491916283
+  ],
+  "pass": 3,
+  "disposition": "fixed_reshape",
+  "reason": "missed hatch 43% -> extended"
+ },
+ {
+  "tile": "T1007",
+  "category": "shape_mismatch",
+  "confidence": "medium",
+  "note": "narrow skewed outline overhangs blank street area",
+  "bbox": [
+   -8365139.699482118,
+   4858152.939148864,
+   -8365113.576129463,
+   4858237.337672827
+  ],
+  "pass": 3,
+  "disposition": "fixed_reshape",
+  "reason": "missed hatch 78% -> extended"
+ },
+ {
+  "tile": "T0410",
+  "category": "shape_mismatch",
+  "confidence": "low",
+  "note": "elongated outline overhangs blank area",
+  "bbox": [
+   -8364590.707178625,
+   4859389.578473789,
+   -8364570.6122919675,
+   4859471.967509085
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "shape checks out (over=0%, missed=1%)"
+ },
+ {
+  "tile": "T0406",
+  "category": "shape_mismatch",
+  "confidence": "low",
+  "note": "outline overhangs onto Crown Street lettering",
+  "bbox": [
+   -8365311.309814176,
+   4859457.901088425,
+   -8365293.224416183,
+   4859480.005463748
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "shape checks out (over=1%, missed=0%)"
+ },
+ {
+  "tile": "T1408",
+  "category": "missing_feature",
+  "confidence": "high",
+  "note": "large hatched building block uncovered",
+  "bbox": [
+   -8365012.2979007065,
+   4857295.691284039,
+   -8364958.041706731,
+   4857364.013898675
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.23 dark=0.83 area=809m2"
+ },
+ {
+  "tile": "T0909",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched buildings left-center uncovered",
+  "bbox": [
+   -8364824.611659322,
+   4858425.0239142105,
+   -8364784.421886006,
+   4858501.384483511
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 92%"
+ },
+ {
+  "tile": "T0508",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building area right side uncovered",
+  "bbox": [
+   -8364859.576762107,
+   4859107.446265113,
+   -8364809.339545462,
+   4859159.692970423
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.54 dark=0.74 area=2432m2"
+ },
+ {
+  "tile": "T1007",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building strip below right center unoutlined",
+  "bbox": [
+   -8365115.585618128,
+   4858146.910682866,
+   -8365063.338912818,
+   4858193.128922179
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 200%"
+ },
+ {
+  "tile": "T0508",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block right side without outline",
+  "bbox": [
+   -8364859.576762107,
+   4859215.958653064,
+   -8364817.377500125,
+   4859260.167403712
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 100%"
+ },
+ {
+  "tile": "T1408",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched buildings left side no outline",
+  "bbox": [
+   -8365070.573072014,
+   4857323.82412536,
+   -8365030.383298699,
+   4857368.032876007
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 57%"
+ },
+ {
+  "tile": "T0909",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building right of center uncovered",
+  "bbox": [
+   -8364784.421886006,
+   4858368.758231569,
+   -8364744.232112691,
+   4858408.948004885
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.25 dark=0.52 area=1316m2"
+ },
+ {
+  "tile": "T0907",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building right side unoutlined",
+  "bbox": [
+   -8365051.281980824,
+   4858324.549480922,
+   -8365007.073230176,
+   4858360.720276906
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 82%"
+ },
+ {
+  "tile": "T0909",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched block upper-left partially uncovered",
+  "bbox": [
+   -8364876.858364632,
+   4858461.194710195,
+   -8364840.687568648,
+   4858505.403460843
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 97%"
+ },
+ {
+  "tile": "T1408",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "vertical hatched strip mostly uncovered",
+  "bbox": [
+   -8365002.250457378,
+   4857396.165717328,
+   -8364982.15557072,
+   4857472.526286628
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 93%"
+ },
+ {
+  "tile": "T0908",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched block left uncovered",
+  "bbox": [
+   -8365002.250457378,
+   4858360.720276906,
+   -8364962.060684062,
+   4858392.872095558
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 85%"
+ },
+ {
+  "tile": "T1408",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block partly uncovered",
+  "bbox": [
+   -8364873.643182768,
+   4857323.82412536,
+   -8364825.415454788,
+   4857347.9379893495
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 96%"
+ },
+ {
+  "tile": "T0908",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "possible hatched building without outline",
+  "bbox": [
+   -8364873.643182768,
+   4858320.53050359,
+   -8364841.491364115,
+   4858352.682322242
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 73%"
+ },
+ {
+  "tile": "T1007",
+  "category": "missing_feature",
+  "confidence": "high",
+  "note": "large hatched building block unoutlined near left center",
+  "bbox": [
+   -8365252.230847402,
+   4858114.758864214,
+   -8365210.0315854205,
+   4858138.872728203
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 76%"
+ },
+ {
+  "tile": "T0805",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched buildings top-right partly unoutlined",
+  "bbox": [
+   -8365452.777816247,
+   4858675.004304235,
+   -8365418.616508929,
+   4858703.1371455565
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 79%"
+ },
+ {
+  "tile": "T0609",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched block at left edge uncovered",
+  "bbox": [
+   -8364876.858364632,
+   4858961.959285709,
+   -8364854.753989309,
+   4859002.149059025
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 98%"
+ },
+ {
+  "tile": "T0609",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building right of street uncovered",
+  "bbox": [
+   -8364667.871543391,
+   4858994.111104362,
+   -8364643.757679401,
+   4859030.281900346
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 95%"
+ },
+ {
+  "tile": "T1105",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "row of hatched buildings along street unmarked",
+  "bbox": [
+   -8365581.385090858,
+   4857939.129554824,
+   -8365515.071964887,
+   4857951.186486819
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.25 dark=0.66 area=764m2"
+ },
+ {
+  "tile": "T0410",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building area missing outline",
+  "bbox": [
+   -8364608.792576617,
+   4859264.990176509,
+   -8364584.678712628,
+   4859297.141995162
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 94%"
+ },
+ {
+  "tile": "T0410",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block without green outline",
+  "bbox": [
+   -8364618.840019946,
+   4859447.853645096,
+   -8364596.735644623,
+   4859480.005463748
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 68%"
+ },
+ {
+  "tile": "T1205",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched block partially unoutlined",
+  "bbox": [
+   -8365455.591100379,
+   4857815.746950745,
+   -8365431.47723639,
+   4857843.879792065
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 73%"
+ },
+ {
+  "tile": "T0605",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block at left edge unoutlined",
+  "bbox": [
+   -8365699.944922139,
+   4859026.262923014,
+   -8365675.831058149,
+   4859052.38627567
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 68%"
+ },
+ {
+  "tile": "T0907",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched area left edge without outline",
+  "bbox": [
+   -8365272.32573406,
+   4858324.549480922,
+   -8365244.192892739,
+   4858346.653856245
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 65%"
+ },
+ {
+  "tile": "T0310",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched buildings along left edge not outlined",
+  "bbox": [
+   -8364671.086725256,
+   4859597.359601831,
+   -8364655.010815931,
+   4859635.539886481
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 67%"
+ },
+ {
+  "tile": "T0509",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building left edge without outline",
+  "bbox": [
+   -8364864.8014326375,
+   4859139.598083765,
+   -8364840.687568648,
+   4859163.711947754
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 96%"
+ },
+ {
+  "tile": "T0310",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building lacks outline",
+  "bbox": [
+   -8364608.792576617,
+   4859498.894657208,
+   -8364586.688201293,
+   4859525.018009863
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 97%"
+ },
+ {
+  "tile": "T1308",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched area right of center unmarked",
+  "bbox": [
+   -8364873.643182768,
+   4857549.690651394,
+   -8364845.510341447,
+   4857569.785538052
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.32 dark=0.59 area=401m2"
+ },
+ {
+  "tile": "T0409",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "possible hatched building right edge uncovered",
+  "bbox": [
+   -8364613.615349415,
+   4859289.104040499,
+   -8364593.922360489,
+   4859317.23688182
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 92%"
+ },
+ {
+  "tile": "T0703",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building at right, no outline",
+  "bbox": [
+   -8365870.349560997,
+   4858740.111737007,
+   -8365848.245185674,
+   4858764.225600996
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 96%"
+ },
+ {
+  "tile": "T0507",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building without green outline",
+  "bbox": [
+   -8365127.642550123,
+   4859254.1389377145,
+   -8365107.547663465,
+   4859280.26229037
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 60%"
+ },
+ {
+  "tile": "T0805",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched buildings on left edge not outlined",
+  "bbox": [
+   -8365699.944922139,
+   4858634.814530919,
+   -8365677.840546816,
+   4858656.918906243
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 59%"
+ },
+ {
+  "tile": "T0804",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building not outlined",
+  "bbox": [
+   -8365668.5968989525,
+   4858574.529870946,
+   -8365648.502012294,
+   4858598.643734935
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.37 dark=0.71 area=357m2"
+ },
+ {
+  "tile": "T0804",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building without outline",
+  "bbox": [
+   -8365700.748717604,
+   4858574.529870946,
+   -8365680.653830946,
+   4858598.643734935
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 60%"
+ },
+ {
+  "tile": "T0805",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building on left edge not outlined",
+  "bbox": [
+   -8365699.944922139,
+   4858522.283165636,
+   -8365681.859524147,
+   4858548.406518291
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.15 dark=0.66 area=253m2"
+ },
+ {
+  "tile": "T0506",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block left edge unmarked",
+  "bbox": [
+   -8365461.217668643,
+   4859143.617061096,
+   -8365446.74935025,
+   4859175.768879749
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 64%"
+ },
+ {
+  "tile": "T0509",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched strip right side unoutlined",
+  "bbox": [
+   -8364619.643815411,
+   4859135.579106433,
+   -8364603.567906085,
+   4859163.711947754
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 78%"
+ },
+ {
+  "tile": "T1308",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near left edge unmarked",
+  "bbox": [
+   -8365074.592049346,
+   4857634.0891753575,
+   -8365052.487674022,
+   4857654.184062015
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 71%"
+ },
+ {
+  "tile": "T0605",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched building at left edge unoutlined",
+  "bbox": [
+   -8365699.944922139,
+   4858941.864399051,
+   -8365687.887990144,
+   4858978.035195036
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 74%"
+ },
+ {
+  "tile": "T1308",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building bottom unmarked",
+  "bbox": [
+   -8364990.193525383,
+   4857407.418853857,
+   -8364966.079661394,
+   4857425.102354116
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 93%"
+ },
+ {
+  "tile": "T0210",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building lower left unmarked",
+  "bbox": [
+   -8364602.764110619,
+   4859696.628341921,
+   -8364582.669223961,
+   4859716.723228579
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 71%"
+ },
+ {
+  "tile": "T1307",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building left edge without outline",
+  "bbox": [
+   -8365272.32573406,
+   4857609.975311369,
+   -8365252.230847402,
+   4857630.0701980265
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 66%"
+ },
+ {
+  "tile": "T0506",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block left side unmarked",
+  "bbox": [
+   -8365466.040441441,
+   4859095.389333118,
+   -8365449.964532115,
+   4859119.503197107
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 52%"
+ },
+ {
+  "tile": "T1008",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched building near top not outlined",
+  "bbox": [
+   -8364933.927842741,
+   4858283.55591214,
+   -8364909.813978751,
+   4858299.631821467
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 38%"
+ },
+ {
+  "tile": "T1207",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building left side not outlined",
+  "bbox": [
+   -8365260.268802065,
+   4857707.234562792,
+   -8365244.192892739,
+   4857731.348426782
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.42 dark=0.70 area=311m2"
+ },
+ {
+  "tile": "T0310",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building not outlined",
+  "bbox": [
+   -8364563.37813277,
+   4859677.739148462,
+   -8364550.517405309,
+   4859707.881478449
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 91%"
+ },
+ {
+  "tile": "T1508",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building right of Water Street unmarked",
+  "bbox": [
+   -8364913.832956083,
+   4857182.356123288,
+   -8364893.738069425,
+   4857200.44152128
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 61%"
+ },
+ {
+  "tile": "T0604",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building block not outlined",
+  "bbox": [
+   -8365843.422412875,
+   4859096.595026317,
+   -8365825.337014884,
+   4859114.680424309
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 65%"
+ },
+ {
+  "tile": "T1205",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near top unoutlined",
+  "bbox": [
+   -8365539.185828876,
+   4857865.984167389,
+   -8365521.100430884,
+   4857884.069565381
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 68%"
+ },
+ {
+  "tile": "T1508",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building left of Street unmarked",
+  "bbox": [
+   -8365046.459208025,
+   4857136.137883975,
+   -8365030.383298699,
+   4857156.232770633
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 88%"
+ },
+ {
+  "tile": "T0408",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near street lettering has no outline",
+  "bbox": [
+   -8364990.193525383,
+   4859425.749269772,
+   -8364974.117616056,
+   4859443.834667765
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.11 dark=0.66 area=312m2"
+ },
+ {
+  "tile": "T0703",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building unmarked at right",
+  "bbox": [
+   -8365872.359049663,
+   4858691.884009028,
+   -8365854.273651671,
+   4858707.959918355
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 97%"
+ },
+ {
+  "tile": "T1308",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched block at left edge unmarked",
+  "bbox": [
+   -8365082.630004009,
+   4857553.709628726,
+   -8365070.573072014,
+   4857577.823492716
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 64%"
+ },
+ {
+  "tile": "T0604",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near alley not outlined",
+  "bbox": [
+   -8365736.919513589,
+   4858980.044683701,
+   -8365720.843604263,
+   4858998.130081694
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 84%"
+ },
+ {
+  "tile": "T1105",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building lower area not outlined",
+  "bbox": [
+   -8365531.147874213,
+   4857820.569723543,
+   -8365515.071964887,
+   4857838.655121535
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 57%"
+ },
+ {
+  "tile": "T1306",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building at left edge unmarked",
+  "bbox": [
+   -8365494.173282762,
+   4857616.003777366,
+   -8365476.08788477,
+   4857632.079686692
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 96%"
+ },
+ {
+  "tile": "T0604",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building below alley not outlined",
+  "bbox": [
+   -8365742.947979586,
+   4858951.911842381,
+   -8365726.87207026,
+   4858969.997240372
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "no hatch evidence (rh=0.08)"
+ },
+ {
+  "tile": "T1307",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "solid dark building lacks outline",
+  "bbox": [
+   -8365226.107494746,
+   4857662.222016679,
+   -8365208.022096755,
+   4857678.297926005
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 98%"
+ },
+ {
+  "tile": "T0210",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building left edge not outlined",
+  "bbox": [
+   -8364661.039281927,
+   4859799.112263876,
+   -8364646.972861267,
+   4859819.207150534
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 94%"
+ },
+ {
+  "tile": "T0110",
+  "category": "missing_feature",
+  "confidence": "high",
+  "note": "hatched building near top-right not outlined",
+  "bbox": [
+   -8364426.732903496,
+   4860045.0736765675,
+   -8364411.86268737,
+   4860063.15907456
+  ],
+  "pass": 3,
+  "disposition": "needs_review",
+  "reason": "weak hatch 0.19"
+ },
+ {
+  "tile": "T0406",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched block top left uncovered",
+  "bbox": [
+   -8365401.736804136,
+   4859518.185748398,
+   -8365379.632428812,
+   4859530.242680393
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 87%"
+ },
+ {
+  "tile": "T0507",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched area lacks outline",
+  "bbox": [
+   -8365276.344711391,
+   4859157.6834817575,
+   -8365260.268802065,
+   4859173.759391083
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 93%"
+ },
+ {
+  "tile": "T0604",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building not outlined",
+  "bbox": [
+   -8365797.204173562,
+   4858849.427920425,
+   -8365781.128264236,
+   4858865.503829751
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 56%"
+ },
+ {
+  "tile": "T1307",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "hatched block possibly unoutlined",
+  "bbox": [
+   -8365077.405333479,
+   4857561.747583389,
+   -8365063.338912818,
+   4857579.832981382
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 67%"
+ },
+ {
+  "tile": "T0406",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near top uncovered",
+  "bbox": [
+   -8365299.252882181,
+   4859516.176259733,
+   -8365281.167484188,
+   4859530.242680393
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 153%"
+ },
+ {
+  "tile": "T0507",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building missing outline",
+  "bbox": [
+   -8365276.344711391,
+   4859191.844789076,
+   -8365262.278290731,
+   4859209.930187068
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 97%"
+ },
+ {
+  "tile": "T1207",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "possible hatched area unmarked",
+  "bbox": [
+   -8365173.860789436,
+   4857646.949902819,
+   -8365161.803857442,
+   4857667.044789476
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 46%"
+ },
+ {
+  "tile": "T1207",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building right edge unoutlined",
+  "bbox": [
+   -8365043.24402616,
+   4857767.519222765,
+   -8365029.1776054995,
+   4857783.595132092
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 96%"
+ },
+ {
+  "tile": "T0110",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched block upper-right not outlined",
+  "bbox": [
+   -8364446.023994688,
+   4859974.741573266,
+   -8364429.948085362,
+   4859988.807993926
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 95%"
+ },
+ {
+  "tile": "T1306",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building without outline near Lombard",
+  "bbox": [
+   -8365425.850668125,
+   4857603.946845371,
+   -8365411.7842474645,
+   4857620.022754697
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.29 dark=0.75 area=221m2"
+ },
+ {
+  "tile": "T0210",
+  "category": "missing_feature",
+  "confidence": "low",
+  "note": "small dark fill unmarked",
+  "bbox": [
+   -8364490.232745335,
+   4859785.045843216,
+   -8364478.175813341,
+   4859803.131241208
+  ],
+  "pass": 3,
+  "disposition": "fixed_add",
+  "reason": "hatch=0.00 dark=0.74 area=115m2"
+ },
+ {
+  "tile": "T0408",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building strip below street uncovered",
+  "bbox": [
+   -8364897.757046757,
+   4859409.6733604465,
+   -8364885.700114762,
+   4859427.758758438
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 94%"
+ },
+ {
+  "tile": "T0605",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building near North Street not outlined",
+  "bbox": [
+   -8365609.517932178,
+   4858963.968774375,
+   -8365599.47048885,
+   4858980.044683701
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 94%"
+ },
+ {
+  "tile": "T1305",
+  "category": "missing_feature",
+  "confidence": "medium",
+  "note": "hatched building at right edge unmarked",
+  "bbox": [
+   -8365423.439281726,
+   4857605.956334037,
+   -8365417.008917996,
+   4857618.013266032
+  ],
+  "pass": 3,
+  "disposition": "dismissed",
+  "reason": "already covered 75%"
+ }
+]

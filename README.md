@@ -139,6 +139,23 @@ lettering clamp, Dock curved row). Re-run: `env/bin/python
 pilot/extract_candidates_v4.py` (~15 s); comparison renders:
 `pilot/render_v4_qc.py`.
 
+## Vision-audited candidates (v5, current)
+
+**`pilot/results/candidates_v5.gpkg`** supersedes v4: a full-sheet
+vision-audit loop (tile -> render raw|overlay pairs -> vision-model judge
+with a strict four-category rubric -> **raster-evidence verification** ->
+fix or flag -> re-audit changed tiles, 3 passes to convergence) reviewed
+all 132 content tiles of the city core against Sunil's 2026-08-27 QC
+feedback. Net: **798 candidates + 26 oversize_blocks + 24 needs_review**
+(121 buildings added, 17 lettering/tree false-positives deleted, 13
+reshaped, 29 additions trimmed of lettering tails; every ambiguous finding
+flagged in `needs_review` instead of guessed). Registration unchanged at
+median 0.01 m. Harness is feature-generic (`pilot/audit_vision.py
+--feature`) so a ROADS pass can reuse the tiling/judging plumbing. Full
+numbers, per-pass convergence, and honest residuals:
+[`pilot/results/audit_v5.md`](pilot/results/audit_v5.md); before/after
+crops at Sunil's screenshot locations: `pilot/results/qc_v5_*.png`.
+
 ## Pilot: 1762 Clarkson & Biddle (Philadelphia)
 
 Scored SAM against 4 hand-traced landmarks

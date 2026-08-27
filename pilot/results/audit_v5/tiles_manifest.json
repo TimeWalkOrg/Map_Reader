@@ -1,0 +1,3310 @@
+{
+ "gpkg": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/candidates_v4.gpkg",
+ "feature": "buildings",
+ "tile_px": 704,
+ "stride_px": 512,
+ "cog": "/Users/gabriel/NYC_Maps/maps/tw_1762_philadelphia_map_clarkson_biddle_cog.tif",
+ "crs": "EPSG:3857",
+ "tiles": [
+  {
+   "id": "T0007",
+   "col0": 3584,
+   "row0": 0,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4860365.386169895
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4860082.450165751,
+    -8365005.465639243,
+    4860365.386169895
+   ],
+   "ink_frac": 0.0263,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0007_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0007_ovl.png"
+  },
+  {
+   "id": "T0008",
+   "col0": 4096,
+   "row0": 0,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4860365.386169895
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4860082.450165751,
+    -8364799.693999866,
+    4860365.386169895
+   ],
+   "ink_frac": 0.0079,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0008_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0008_ovl.png"
+  },
+  {
+   "id": "T0107",
+   "col0": 3584,
+   "row0": 512,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4860159.614530518
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4859876.678526375,
+    -8365005.465639243,
+    4860159.614530518
+   ],
+   "ink_frac": 0.0997,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0107_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0107_ovl.png"
+  },
+  {
+   "id": "T0108",
+   "col0": 4096,
+   "row0": 512,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4860159.614530518
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4859876.678526375,
+    -8364799.693999866,
+    4860159.614530518
+   ],
+   "ink_frac": 0.0143,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0108_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0108_ovl.png"
+  },
+  {
+   "id": "T0109",
+   "col0": 4608,
+   "row0": 512,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4860159.614530518
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4859876.678526375,
+    -8364593.92236049,
+    4860159.614530518
+   ],
+   "ink_frac": 0.0152,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0109_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0109_ovl.png"
+  },
+  {
+   "id": "T0110",
+   "col0": 5120,
+   "row0": 512,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4860159.614530518
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4859876.678526375,
+    -8364388.150721113,
+    4860159.614530518
+   ],
+   "ink_frac": 0.0492,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0110_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0110_ovl.png"
+  },
+  {
+   "id": "T0207",
+   "col0": 3584,
+   "row0": 1024,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4859953.842891142
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4859670.906886999,
+    -8365005.465639243,
+    4859953.842891142
+   ],
+   "ink_frac": 0.1356,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0207_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0207_ovl.png"
+  },
+  {
+   "id": "T0208",
+   "col0": 4096,
+   "row0": 1024,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4859953.842891142
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4859670.906886999,
+    -8364799.693999866,
+    4859953.842891142
+   ],
+   "ink_frac": 0.0443,
+   "n_polys": 3,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0208_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0208_ovl.png"
+  },
+  {
+   "id": "T0209",
+   "col0": 4608,
+   "row0": 1024,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4859953.842891142
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4859670.906886999,
+    -8364593.92236049,
+    4859953.842891142
+   ],
+   "ink_frac": 0.0959,
+   "n_polys": 10,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0209_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0209_ovl.png"
+  },
+  {
+   "id": "T0210",
+   "col0": 5120,
+   "row0": 1024,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4859953.842891142
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4859670.906886999,
+    -8364388.150721113,
+    4859953.842891142
+   ],
+   "ink_frac": 0.1341,
+   "n_polys": 6,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0210_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0210_ovl.png"
+  },
+  {
+   "id": "T0303",
+   "col0": 1536,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4859465.135247623,
+    -8365828.5521967495,
+    4859748.071251765
+   ],
+   "ink_frac": 0.021,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0303_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0303_ovl.png"
+  },
+  {
+   "id": "T0304",
+   "col0": 2048,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4859465.135247623,
+    -8365622.780557373,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1121,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0304_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0304_ovl.png"
+  },
+  {
+   "id": "T0305",
+   "col0": 2560,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4859465.135247623,
+    -8365417.008917996,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1531,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0305_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0305_ovl.png"
+  },
+  {
+   "id": "T0306",
+   "col0": 3072,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4859465.135247623,
+    -8365211.23727862,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1782,
+   "n_polys": 14,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0306_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0306_ovl.png"
+  },
+  {
+   "id": "T0307",
+   "col0": 3584,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4859465.135247623,
+    -8365005.465639243,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1751,
+   "n_polys": 17,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0307_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0307_ovl.png"
+  },
+  {
+   "id": "T0308",
+   "col0": 4096,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4859465.135247623,
+    -8364799.693999866,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1704,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0308_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0308_ovl.png"
+  },
+  {
+   "id": "T0309",
+   "col0": 4608,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4859465.135247623,
+    -8364593.92236049,
+    4859748.071251765
+   ],
+   "ink_frac": 0.2111,
+   "n_polys": 31,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0309_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0309_ovl.png"
+  },
+  {
+   "id": "T0310",
+   "col0": 5120,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4859465.135247623,
+    -8364388.150721113,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1477,
+   "n_polys": 17,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0310_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0310_ovl.png"
+  },
+  {
+   "id": "T0311",
+   "col0": 5632,
+   "row0": 1536,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364465.3150858795,
+    0.0,
+    -0.4018977331573068,
+    4859748.071251765
+   ],
+   "bounds": [
+    -8364465.3150858795,
+    4859465.135247623,
+    -8364182.379081736,
+    4859748.071251765
+   ],
+   "ink_frac": 0.1228,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0311_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0311_ovl.png"
+  },
+  {
+   "id": "T0403",
+   "col0": 1536,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4859259.363608246,
+    -8365828.5521967495,
+    4859542.299612388
+   ],
+   "ink_frac": 0.0192,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0403_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0403_ovl.png"
+  },
+  {
+   "id": "T0404",
+   "col0": 2048,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4859259.363608246,
+    -8365622.780557373,
+    4859542.299612388
+   ],
+   "ink_frac": 0.0892,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0404_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0404_ovl.png"
+  },
+  {
+   "id": "T0405",
+   "col0": 2560,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4859259.363608246,
+    -8365417.008917996,
+    4859542.299612388
+   ],
+   "ink_frac": 0.1185,
+   "n_polys": 5,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0405_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0405_ovl.png"
+  },
+  {
+   "id": "T0406",
+   "col0": 3072,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4859259.363608246,
+    -8365211.23727862,
+    4859542.299612388
+   ],
+   "ink_frac": 0.1755,
+   "n_polys": 23,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0406_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0406_ovl.png"
+  },
+  {
+   "id": "T0407",
+   "col0": 3584,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4859259.363608246,
+    -8365005.465639243,
+    4859542.299612388
+   ],
+   "ink_frac": 0.1972,
+   "n_polys": 31,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0407_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0407_ovl.png"
+  },
+  {
+   "id": "T0408",
+   "col0": 4096,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4859259.363608246,
+    -8364799.693999866,
+    4859542.299612388
+   ],
+   "ink_frac": 0.2248,
+   "n_polys": 31,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0408_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0408_ovl.png"
+  },
+  {
+   "id": "T0409",
+   "col0": 4608,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4859259.363608246,
+    -8364593.92236049,
+    4859542.299612388
+   ],
+   "ink_frac": 0.2788,
+   "n_polys": 31,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0409_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0409_ovl.png"
+  },
+  {
+   "id": "T0410",
+   "col0": 5120,
+   "row0": 2048,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4859542.299612388
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4859259.363608246,
+    -8364388.150721113,
+    4859542.299612388
+   ],
+   "ink_frac": 0.1778,
+   "n_polys": 13,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0410_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0410_ovl.png"
+  },
+  {
+   "id": "T0503",
+   "col0": 1536,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4859053.591968869,
+    -8365828.5521967495,
+    4859336.527973012
+   ],
+   "ink_frac": 0.0289,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0503_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0503_ovl.png"
+  },
+  {
+   "id": "T0504",
+   "col0": 2048,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4859053.591968869,
+    -8365622.780557373,
+    4859336.527973012
+   ],
+   "ink_frac": 0.0688,
+   "n_polys": 6,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0504_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0504_ovl.png"
+  },
+  {
+   "id": "T0505",
+   "col0": 2560,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4859053.591968869,
+    -8365417.008917996,
+    4859336.527973012
+   ],
+   "ink_frac": 0.1264,
+   "n_polys": 9,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0505_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0505_ovl.png"
+  },
+  {
+   "id": "T0506",
+   "col0": 3072,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4859053.591968869,
+    -8365211.23727862,
+    4859336.527973012
+   ],
+   "ink_frac": 0.231,
+   "n_polys": 23,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0506_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0506_ovl.png"
+  },
+  {
+   "id": "T0507",
+   "col0": 3584,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4859053.591968869,
+    -8365005.465639243,
+    4859336.527973012
+   ],
+   "ink_frac": 0.31,
+   "n_polys": 44,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0507_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0507_ovl.png"
+  },
+  {
+   "id": "T0508",
+   "col0": 4096,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4859053.591968869,
+    -8364799.693999866,
+    4859336.527973012
+   ],
+   "ink_frac": 0.3415,
+   "n_polys": 38,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0508_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0508_ovl.png"
+  },
+  {
+   "id": "T0509",
+   "col0": 4608,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4859053.591968869,
+    -8364593.92236049,
+    4859336.527973012
+   ],
+   "ink_frac": 0.3945,
+   "n_polys": 33,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0509_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0509_ovl.png"
+  },
+  {
+   "id": "T0510",
+   "col0": 5120,
+   "row0": 2560,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4859336.527973012
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4859053.591968869,
+    -8364388.150721113,
+    4859336.527973012
+   ],
+   "ink_frac": 0.1683,
+   "n_polys": 11,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0510_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0510_ovl.png"
+  },
+  {
+   "id": "T0602",
+   "col0": 1024,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4858847.820329493,
+    -8366034.323836125,
+    4859130.756333635
+   ],
+   "ink_frac": 0.012,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0602_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0602_ovl.png"
+  },
+  {
+   "id": "T0603",
+   "col0": 1536,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4858847.820329493,
+    -8365828.5521967495,
+    4859130.756333635
+   ],
+   "ink_frac": 0.0588,
+   "n_polys": 6,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0603_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0603_ovl.png"
+  },
+  {
+   "id": "T0604",
+   "col0": 2048,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4858847.820329493,
+    -8365622.780557373,
+    4859130.756333635
+   ],
+   "ink_frac": 0.1559,
+   "n_polys": 16,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0604_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0604_ovl.png"
+  },
+  {
+   "id": "T0605",
+   "col0": 2560,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4858847.820329493,
+    -8365417.008917996,
+    4859130.756333635
+   ],
+   "ink_frac": 0.19,
+   "n_polys": 15,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0605_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0605_ovl.png"
+  },
+  {
+   "id": "T0606",
+   "col0": 3072,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4858847.820329493,
+    -8365211.23727862,
+    4859130.756333635
+   ],
+   "ink_frac": 0.2345,
+   "n_polys": 17,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0606_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0606_ovl.png"
+  },
+  {
+   "id": "T0607",
+   "col0": 3584,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4858847.820329493,
+    -8365005.465639243,
+    4859130.756333635
+   ],
+   "ink_frac": 0.2719,
+   "n_polys": 25,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0607_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0607_ovl.png"
+  },
+  {
+   "id": "T0608",
+   "col0": 4096,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4858847.820329493,
+    -8364799.693999866,
+    4859130.756333635
+   ],
+   "ink_frac": 0.3696,
+   "n_polys": 22,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0608_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0608_ovl.png"
+  },
+  {
+   "id": "T0609",
+   "col0": 4608,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4858847.820329493,
+    -8364593.92236049,
+    4859130.756333635
+   ],
+   "ink_frac": 0.4211,
+   "n_polys": 28,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0609_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0609_ovl.png"
+  },
+  {
+   "id": "T0610",
+   "col0": 5120,
+   "row0": 3072,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4859130.756333635
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4858847.820329493,
+    -8364388.150721113,
+    4859130.756333635
+   ],
+   "ink_frac": 0.1731,
+   "n_polys": 10,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0610_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0610_ovl.png"
+  },
+  {
+   "id": "T0702",
+   "col0": 1024,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4858642.048690116,
+    -8366034.323836125,
+    4858924.984694259
+   ],
+   "ink_frac": 0.0331,
+   "n_polys": 2,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0702_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0702_ovl.png"
+  },
+  {
+   "id": "T0703",
+   "col0": 1536,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4858642.048690116,
+    -8365828.5521967495,
+    4858924.984694259
+   ],
+   "ink_frac": 0.1036,
+   "n_polys": 17,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0703_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0703_ovl.png"
+  },
+  {
+   "id": "T0704",
+   "col0": 2048,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4858642.048690116,
+    -8365622.780557373,
+    4858924.984694259
+   ],
+   "ink_frac": 0.1732,
+   "n_polys": 25,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0704_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0704_ovl.png"
+  },
+  {
+   "id": "T0705",
+   "col0": 2560,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4858642.048690116,
+    -8365417.008917996,
+    4858924.984694259
+   ],
+   "ink_frac": 0.2296,
+   "n_polys": 30,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0705_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0705_ovl.png"
+  },
+  {
+   "id": "T0706",
+   "col0": 3072,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4858642.048690116,
+    -8365211.23727862,
+    4858924.984694259
+   ],
+   "ink_frac": 0.2783,
+   "n_polys": 33,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0706_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0706_ovl.png"
+  },
+  {
+   "id": "T0707",
+   "col0": 3584,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4858642.048690116,
+    -8365005.465639243,
+    4858924.984694259
+   ],
+   "ink_frac": 0.3665,
+   "n_polys": 25,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0707_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0707_ovl.png"
+  },
+  {
+   "id": "T0708",
+   "col0": 4096,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4858642.048690116,
+    -8364799.693999866,
+    4858924.984694259
+   ],
+   "ink_frac": 0.3866,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0708_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0708_ovl.png"
+  },
+  {
+   "id": "T0709",
+   "col0": 4608,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4858642.048690116,
+    -8364593.92236049,
+    4858924.984694259
+   ],
+   "ink_frac": 0.3799,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0709_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0709_ovl.png"
+  },
+  {
+   "id": "T0710",
+   "col0": 5120,
+   "row0": 3584,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364671.086725256,
+    0.0,
+    -0.4018977331573068,
+    4858924.984694259
+   ],
+   "bounds": [
+    -8364671.086725256,
+    4858642.048690116,
+    -8364388.150721113,
+    4858924.984694259
+   ],
+   "ink_frac": 0.1137,
+   "n_polys": 2,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0710_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0710_ovl.png"
+  },
+  {
+   "id": "T0802",
+   "col0": 1024,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4858436.277050739,
+    -8366034.323836125,
+    4858719.213054882
+   ],
+   "ink_frac": 0.0367,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0802_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0802_ovl.png"
+  },
+  {
+   "id": "T0803",
+   "col0": 1536,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4858436.277050739,
+    -8365828.5521967495,
+    4858719.213054882
+   ],
+   "ink_frac": 0.0543,
+   "n_polys": 5,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0803_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0803_ovl.png"
+  },
+  {
+   "id": "T0804",
+   "col0": 2048,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4858436.277050739,
+    -8365622.780557373,
+    4858719.213054882
+   ],
+   "ink_frac": 0.1268,
+   "n_polys": 12,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0804_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0804_ovl.png"
+  },
+  {
+   "id": "T0805",
+   "col0": 2560,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4858436.277050739,
+    -8365417.008917996,
+    4858719.213054882
+   ],
+   "ink_frac": 0.1916,
+   "n_polys": 25,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0805_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0805_ovl.png"
+  },
+  {
+   "id": "T0806",
+   "col0": 3072,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4858436.277050739,
+    -8365211.23727862,
+    4858719.213054882
+   ],
+   "ink_frac": 0.2908,
+   "n_polys": 27,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0806_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0806_ovl.png"
+  },
+  {
+   "id": "T0807",
+   "col0": 3584,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4858436.277050739,
+    -8365005.465639243,
+    4858719.213054882
+   ],
+   "ink_frac": 0.4515,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0807_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0807_ovl.png"
+  },
+  {
+   "id": "T0808",
+   "col0": 4096,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4858436.277050739,
+    -8364799.693999866,
+    4858719.213054882
+   ],
+   "ink_frac": 0.4443,
+   "n_polys": 15,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0808_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0808_ovl.png"
+  },
+  {
+   "id": "T0809",
+   "col0": 4608,
+   "row0": 4096,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4858719.213054882
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4858436.277050739,
+    -8364593.92236049,
+    4858719.213054882
+   ],
+   "ink_frac": 0.4175,
+   "n_polys": 8,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0809_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0809_ovl.png"
+  },
+  {
+   "id": "T0902",
+   "col0": 1024,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4858230.505411363,
+    -8366034.323836125,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.0271,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0902_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0902_ovl.png"
+  },
+  {
+   "id": "T0903",
+   "col0": 1536,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4858230.505411363,
+    -8365828.5521967495,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.0742,
+   "n_polys": 3,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0903_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0903_ovl.png"
+  },
+  {
+   "id": "T0904",
+   "col0": 2048,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4858230.505411363,
+    -8365622.780557373,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.1004,
+   "n_polys": 13,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0904_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0904_ovl.png"
+  },
+  {
+   "id": "T0905",
+   "col0": 2560,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4858230.505411363,
+    -8365417.008917996,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.1226,
+   "n_polys": 21,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0905_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0905_ovl.png"
+  },
+  {
+   "id": "T0906",
+   "col0": 3072,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4858230.505411363,
+    -8365211.23727862,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.1991,
+   "n_polys": 28,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0906_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0906_ovl.png"
+  },
+  {
+   "id": "T0907",
+   "col0": 3584,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4858230.505411363,
+    -8365005.465639243,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.3787,
+   "n_polys": 36,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0907_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0907_ovl.png"
+  },
+  {
+   "id": "T0908",
+   "col0": 4096,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4858230.505411363,
+    -8364799.693999866,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.453,
+   "n_polys": 32,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0908_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0908_ovl.png"
+  },
+  {
+   "id": "T0909",
+   "col0": 4608,
+   "row0": 4608,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4858513.4414155055
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4858230.505411363,
+    -8364593.92236049,
+    4858513.4414155055
+   ],
+   "ink_frac": 0.5131,
+   "n_polys": 13,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0909_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T0909_ovl.png"
+  },
+  {
+   "id": "T1002",
+   "col0": 1024,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4858024.733771986,
+    -8366034.323836125,
+    4858307.66977613
+   ],
+   "ink_frac": 0.0413,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1002_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1002_ovl.png"
+  },
+  {
+   "id": "T1003",
+   "col0": 1536,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4858024.733771986,
+    -8365828.5521967495,
+    4858307.66977613
+   ],
+   "ink_frac": 0.1335,
+   "n_polys": 5,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1003_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1003_ovl.png"
+  },
+  {
+   "id": "T1004",
+   "col0": 2048,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4858024.733771986,
+    -8365622.780557373,
+    4858307.66977613
+   ],
+   "ink_frac": 0.0885,
+   "n_polys": 10,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1004_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1004_ovl.png"
+  },
+  {
+   "id": "T1005",
+   "col0": 2560,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4858024.733771986,
+    -8365417.008917996,
+    4858307.66977613
+   ],
+   "ink_frac": 0.1187,
+   "n_polys": 16,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1005_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1005_ovl.png"
+  },
+  {
+   "id": "T1006",
+   "col0": 3072,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4858024.733771986,
+    -8365211.23727862,
+    4858307.66977613
+   ],
+   "ink_frac": 0.2166,
+   "n_polys": 29,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1006_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1006_ovl.png"
+  },
+  {
+   "id": "T1007",
+   "col0": 3584,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4858024.733771986,
+    -8365005.465639243,
+    4858307.66977613
+   ],
+   "ink_frac": 0.2336,
+   "n_polys": 39,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1007_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1007_ovl.png"
+  },
+  {
+   "id": "T1008",
+   "col0": 4096,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4858024.733771986,
+    -8364799.693999866,
+    4858307.66977613
+   ],
+   "ink_frac": 0.3591,
+   "n_polys": 44,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1008_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1008_ovl.png"
+  },
+  {
+   "id": "T1009",
+   "col0": 4608,
+   "row0": 5120,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4858307.66977613
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4858024.733771986,
+    -8364593.92236049,
+    4858307.66977613
+   ],
+   "ink_frac": 0.2128,
+   "n_polys": 17,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1009_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1009_ovl.png"
+  },
+  {
+   "id": "T1102",
+   "col0": 1024,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4857818.962132609,
+    -8366034.323836125,
+    4858101.898136753
+   ],
+   "ink_frac": 0.0729,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1102_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1102_ovl.png"
+  },
+  {
+   "id": "T1103",
+   "col0": 1536,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4857818.962132609,
+    -8365828.5521967495,
+    4858101.898136753
+   ],
+   "ink_frac": 0.0697,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1103_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1103_ovl.png"
+  },
+  {
+   "id": "T1104",
+   "col0": 2048,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4857818.962132609,
+    -8365622.780557373,
+    4858101.898136753
+   ],
+   "ink_frac": 0.077,
+   "n_polys": 2,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1104_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1104_ovl.png"
+  },
+  {
+   "id": "T1105",
+   "col0": 2560,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4857818.962132609,
+    -8365417.008917996,
+    4858101.898136753
+   ],
+   "ink_frac": 0.1416,
+   "n_polys": 14,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1105_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1105_ovl.png"
+  },
+  {
+   "id": "T1106",
+   "col0": 3072,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4857818.962132609,
+    -8365211.23727862,
+    4858101.898136753
+   ],
+   "ink_frac": 0.1264,
+   "n_polys": 15,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1106_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1106_ovl.png"
+  },
+  {
+   "id": "T1107",
+   "col0": 3584,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4857818.962132609,
+    -8365005.465639243,
+    4858101.898136753
+   ],
+   "ink_frac": 0.2075,
+   "n_polys": 31,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1107_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1107_ovl.png"
+  },
+  {
+   "id": "T1108",
+   "col0": 4096,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4857818.962132609,
+    -8364799.693999866,
+    4858101.898136753
+   ],
+   "ink_frac": 0.2938,
+   "n_polys": 33,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1108_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1108_ovl.png"
+  },
+  {
+   "id": "T1109",
+   "col0": 4608,
+   "row0": 5632,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4858101.898136753
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4857818.962132609,
+    -8364593.92236049,
+    4858101.898136753
+   ],
+   "ink_frac": 0.1566,
+   "n_polys": 9,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1109_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1109_ovl.png"
+  },
+  {
+   "id": "T1202",
+   "col0": 1024,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4857613.1904932335,
+    -8366034.323836125,
+    4857896.126497376
+   ],
+   "ink_frac": 0.0382,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1202_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1202_ovl.png"
+  },
+  {
+   "id": "T1203",
+   "col0": 1536,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4857613.1904932335,
+    -8365828.5521967495,
+    4857896.126497376
+   ],
+   "ink_frac": 0.0451,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1203_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1203_ovl.png"
+  },
+  {
+   "id": "T1204",
+   "col0": 2048,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4857613.1904932335,
+    -8365622.780557373,
+    4857896.126497376
+   ],
+   "ink_frac": 0.055,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1204_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1204_ovl.png"
+  },
+  {
+   "id": "T1205",
+   "col0": 2560,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4857613.1904932335,
+    -8365417.008917996,
+    4857896.126497376
+   ],
+   "ink_frac": 0.0913,
+   "n_polys": 9,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1205_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1205_ovl.png"
+  },
+  {
+   "id": "T1206",
+   "col0": 3072,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4857613.1904932335,
+    -8365211.23727862,
+    4857896.126497376
+   ],
+   "ink_frac": 0.1327,
+   "n_polys": 15,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1206_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1206_ovl.png"
+  },
+  {
+   "id": "T1207",
+   "col0": 3584,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4857613.1904932335,
+    -8365005.465639243,
+    4857896.126497376
+   ],
+   "ink_frac": 0.2161,
+   "n_polys": 37,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1207_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1207_ovl.png"
+  },
+  {
+   "id": "T1208",
+   "col0": 4096,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4857613.1904932335,
+    -8364799.693999866,
+    4857896.126497376
+   ],
+   "ink_frac": 0.2681,
+   "n_polys": 32,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1208_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1208_ovl.png"
+  },
+  {
+   "id": "T1209",
+   "col0": 4608,
+   "row0": 6144,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4857896.126497376
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4857613.1904932335,
+    -8364593.92236049,
+    4857896.126497376
+   ],
+   "ink_frac": 0.1144,
+   "n_polys": 8,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1209_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1209_ovl.png"
+  },
+  {
+   "id": "T1302",
+   "col0": 1024,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366317.259840269,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8366317.259840269,
+    4857407.418853857,
+    -8366034.323836125,
+    4857690.354858
+   ],
+   "ink_frac": 0.0862,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1302_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1302_ovl.png"
+  },
+  {
+   "id": "T1303",
+   "col0": 1536,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8366111.488200892,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8366111.488200892,
+    4857407.418853857,
+    -8365828.5521967495,
+    4857690.354858
+   ],
+   "ink_frac": 0.0837,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1303_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1303_ovl.png"
+  },
+  {
+   "id": "T1304",
+   "col0": 2048,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365905.716561515,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8365905.716561515,
+    4857407.418853857,
+    -8365622.780557373,
+    4857690.354858
+   ],
+   "ink_frac": 0.0679,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1304_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1304_ovl.png"
+  },
+  {
+   "id": "T1305",
+   "col0": 2560,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365699.944922139,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8365699.944922139,
+    4857407.418853857,
+    -8365417.008917996,
+    4857690.354858
+   ],
+   "ink_frac": 0.0776,
+   "n_polys": 4,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1305_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1305_ovl.png"
+  },
+  {
+   "id": "T1306",
+   "col0": 3072,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4857407.418853857,
+    -8365211.23727862,
+    4857690.354858
+   ],
+   "ink_frac": 0.1203,
+   "n_polys": 13,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1306_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1306_ovl.png"
+  },
+  {
+   "id": "T1307",
+   "col0": 3584,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4857407.418853857,
+    -8365005.465639243,
+    4857690.354858
+   ],
+   "ink_frac": 0.1617,
+   "n_polys": 36,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1307_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1307_ovl.png"
+  },
+  {
+   "id": "T1308",
+   "col0": 4096,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4857407.418853857,
+    -8364799.693999866,
+    4857690.354858
+   ],
+   "ink_frac": 0.201,
+   "n_polys": 29,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1308_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1308_ovl.png"
+  },
+  {
+   "id": "T1309",
+   "col0": 4608,
+   "row0": 6656,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4857690.354858
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4857407.418853857,
+    -8364593.92236049,
+    4857690.354858
+   ],
+   "ink_frac": 0.1541,
+   "n_polys": 7,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1309_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1309_ovl.png"
+  },
+  {
+   "id": "T1406",
+   "col0": 3072,
+   "row0": 7168,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4857484.583218623
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4857201.647214481,
+    -8365211.23727862,
+    4857484.583218623
+   ],
+   "ink_frac": 0.1124,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1406_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1406_ovl.png"
+  },
+  {
+   "id": "T1407",
+   "col0": 3584,
+   "row0": 7168,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4857484.583218623
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4857201.647214481,
+    -8365005.465639243,
+    4857484.583218623
+   ],
+   "ink_frac": 0.1408,
+   "n_polys": 16,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1407_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1407_ovl.png"
+  },
+  {
+   "id": "T1408",
+   "col0": 4096,
+   "row0": 7168,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4857484.583218623
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4857201.647214481,
+    -8364799.693999866,
+    4857484.583218623
+   ],
+   "ink_frac": 0.1924,
+   "n_polys": 11,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1408_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1408_ovl.png"
+  },
+  {
+   "id": "T1409",
+   "col0": 4608,
+   "row0": 7168,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4857484.583218623
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4857201.647214481,
+    -8364593.92236049,
+    4857484.583218623
+   ],
+   "ink_frac": 0.1936,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1409_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1409_ovl.png"
+  },
+  {
+   "id": "T1506",
+   "col0": 3072,
+   "row0": 7680,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4857278.811579246
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4856995.875575104,
+    -8365211.23727862,
+    4857278.811579246
+   ],
+   "ink_frac": 0.093,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1506_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1506_ovl.png"
+  },
+  {
+   "id": "T1507",
+   "col0": 3584,
+   "row0": 7680,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4857278.811579246
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4856995.875575104,
+    -8365005.465639243,
+    4857278.811579246
+   ],
+   "ink_frac": 0.1837,
+   "n_polys": 21,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1507_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1507_ovl.png"
+  },
+  {
+   "id": "T1508",
+   "col0": 4096,
+   "row0": 7680,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4857278.811579246
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4856995.875575104,
+    -8364799.693999866,
+    4857278.811579246
+   ],
+   "ink_frac": 0.1551,
+   "n_polys": 22,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1508_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1508_ovl.png"
+  },
+  {
+   "id": "T1509",
+   "col0": 4608,
+   "row0": 7680,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4857278.811579246
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4856995.875575104,
+    -8364593.92236049,
+    4857278.811579246
+   ],
+   "ink_frac": 0.0566,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1509_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1509_ovl.png"
+  },
+  {
+   "id": "T1606",
+   "col0": 3072,
+   "row0": 8192,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4857073.03993987
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4856790.103935727,
+    -8365211.23727862,
+    4857073.03993987
+   ],
+   "ink_frac": 0.1287,
+   "n_polys": 4,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1606_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1606_ovl.png"
+  },
+  {
+   "id": "T1607",
+   "col0": 3584,
+   "row0": 8192,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4857073.03993987
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4856790.103935727,
+    -8365005.465639243,
+    4857073.03993987
+   ],
+   "ink_frac": 0.1489,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1607_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1607_ovl.png"
+  },
+  {
+   "id": "T1608",
+   "col0": 4096,
+   "row0": 8192,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4857073.03993987
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4856790.103935727,
+    -8364799.693999866,
+    4857073.03993987
+   ],
+   "ink_frac": 0.1319,
+   "n_polys": 21,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1608_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1608_ovl.png"
+  },
+  {
+   "id": "T1609",
+   "col0": 4608,
+   "row0": 8192,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4857073.03993987
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4856790.103935727,
+    -8364593.92236049,
+    4857073.03993987
+   ],
+   "ink_frac": 0.0882,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1609_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1609_ovl.png"
+  },
+  {
+   "id": "T1706",
+   "col0": 3072,
+   "row0": 8704,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4856867.268300493
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4856584.332296351,
+    -8365211.23727862,
+    4856867.268300493
+   ],
+   "ink_frac": 0.1248,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1706_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1706_ovl.png"
+  },
+  {
+   "id": "T1707",
+   "col0": 3584,
+   "row0": 8704,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4856867.268300493
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4856584.332296351,
+    -8365005.465639243,
+    4856867.268300493
+   ],
+   "ink_frac": 0.1309,
+   "n_polys": 19,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1707_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1707_ovl.png"
+  },
+  {
+   "id": "T1708",
+   "col0": 4096,
+   "row0": 8704,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4856867.268300493
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4856584.332296351,
+    -8364799.693999866,
+    4856867.268300493
+   ],
+   "ink_frac": 0.1348,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1708_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1708_ovl.png"
+  },
+  {
+   "id": "T1709",
+   "col0": 4608,
+   "row0": 8704,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4856867.268300493
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4856584.332296351,
+    -8364593.92236049,
+    4856867.268300493
+   ],
+   "ink_frac": 0.0345,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1709_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1709_ovl.png"
+  },
+  {
+   "id": "T1806",
+   "col0": 3072,
+   "row0": 9216,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4856661.496661117
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4856378.560656974,
+    -8365211.23727862,
+    4856661.496661117
+   ],
+   "ink_frac": 0.1179,
+   "n_polys": 6,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1806_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1806_ovl.png"
+  },
+  {
+   "id": "T1807",
+   "col0": 3584,
+   "row0": 9216,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4856661.496661117
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4856378.560656974,
+    -8365005.465639243,
+    4856661.496661117
+   ],
+   "ink_frac": 0.1138,
+   "n_polys": 20,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1807_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1807_ovl.png"
+  },
+  {
+   "id": "T1808",
+   "col0": 4096,
+   "row0": 9216,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4856661.496661117
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4856378.560656974,
+    -8364799.693999866,
+    4856661.496661117
+   ],
+   "ink_frac": 0.1283,
+   "n_polys": 14,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1808_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1808_ovl.png"
+  },
+  {
+   "id": "T1809",
+   "col0": 4608,
+   "row0": 9216,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4856661.496661117
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4856378.560656974,
+    -8364593.92236049,
+    4856661.496661117
+   ],
+   "ink_frac": 0.0396,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1809_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1809_ovl.png"
+  },
+  {
+   "id": "T1906",
+   "col0": 3072,
+   "row0": 9728,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4856455.72502174
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4856172.789017597,
+    -8365211.23727862,
+    4856455.72502174
+   ],
+   "ink_frac": 0.0818,
+   "n_polys": 3,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1906_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1906_ovl.png"
+  },
+  {
+   "id": "T1907",
+   "col0": 3584,
+   "row0": 9728,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4856455.72502174
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4856172.789017597,
+    -8365005.465639243,
+    4856455.72502174
+   ],
+   "ink_frac": 0.0432,
+   "n_polys": 5,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1907_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1907_ovl.png"
+  },
+  {
+   "id": "T1908",
+   "col0": 4096,
+   "row0": 9728,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4856455.72502174
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4856172.789017597,
+    -8364799.693999866,
+    4856455.72502174
+   ],
+   "ink_frac": 0.0771,
+   "n_polys": 7,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1908_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1908_ovl.png"
+  },
+  {
+   "id": "T1909",
+   "col0": 4608,
+   "row0": 9728,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4856455.72502174
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4856172.789017597,
+    -8364593.92236049,
+    4856455.72502174
+   ],
+   "ink_frac": 0.0683,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1909_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T1909_ovl.png"
+  },
+  {
+   "id": "T2006",
+   "col0": 3072,
+   "row0": 10240,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4856249.953382364
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4855967.017378221,
+    -8365211.23727862,
+    4856249.953382364
+   ],
+   "ink_frac": 0.0858,
+   "n_polys": 1,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2006_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2006_ovl.png"
+  },
+  {
+   "id": "T2007",
+   "col0": 3584,
+   "row0": 10240,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4856249.953382364
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4855967.017378221,
+    -8365005.465639243,
+    4856249.953382364
+   ],
+   "ink_frac": 0.0246,
+   "n_polys": 2,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2007_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2007_ovl.png"
+  },
+  {
+   "id": "T2008",
+   "col0": 4096,
+   "row0": 10240,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4856249.953382364
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4855967.017378221,
+    -8364799.693999866,
+    4856249.953382364
+   ],
+   "ink_frac": 0.0703,
+   "n_polys": 9,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2008_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2008_ovl.png"
+  },
+  {
+   "id": "T2009",
+   "col0": 4608,
+   "row0": 10240,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8364876.858364632,
+    0.0,
+    -0.4018977331573068,
+    4856249.953382364
+   ],
+   "bounds": [
+    -8364876.858364632,
+    4855967.017378221,
+    -8364593.92236049,
+    4856249.953382364
+   ],
+   "ink_frac": 0.0628,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2009_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2009_ovl.png"
+  },
+  {
+   "id": "T2106",
+   "col0": 3072,
+   "row0": 10752,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365494.173282762,
+    0.0,
+    -0.4018977331573068,
+    4856044.181742988
+   ],
+   "bounds": [
+    -8365494.173282762,
+    4855761.245738844,
+    -8365211.23727862,
+    4856044.181742988
+   ],
+   "ink_frac": 0.0243,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2106_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2106_ovl.png"
+  },
+  {
+   "id": "T2107",
+   "col0": 3584,
+   "row0": 10752,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365288.401643386,
+    0.0,
+    -0.4018977331573068,
+    4856044.181742988
+   ],
+   "bounds": [
+    -8365288.401643386,
+    4855761.245738844,
+    -8365005.465639243,
+    4856044.181742988
+   ],
+   "ink_frac": 0.0065,
+   "n_polys": 0,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2107_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2107_ovl.png"
+  },
+  {
+   "id": "T2108",
+   "col0": 4096,
+   "row0": 10752,
+   "w": 704,
+   "h": 704,
+   "transform": [
+    0.4018977331573068,
+    0.0,
+    -8365082.630004009,
+    0.0,
+    -0.4018977331573068,
+    4856044.181742988
+   ],
+   "bounds": [
+    -8365082.630004009,
+    4855761.245738844,
+    -8364799.693999866,
+    4856044.181742988
+   ],
+   "ink_frac": 0.0521,
+   "n_polys": 4,
+   "raw": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2108_raw.png",
+   "ovl": "/Users/gabriel/.openclaw/workspace-timewalker/Map_Reader/pilot/results/audit_v5/tiles/T2108_ovl.png"
+  }
+ ]
+}
