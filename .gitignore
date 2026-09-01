@@ -29,3 +29,8 @@ pilot/scratch/
 
 # v5 vision-audit tile renders (regenerable via pilot/audit_vision.py)
 pilot/results/audit_v5/tiles/
+
+# geo-sam pre-encoding artifacts (big / regenerable; shipped via Gitea release)
+geo-sam/env/
+geo-sam/models/
+geo-sam/features_*/
