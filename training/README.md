@@ -7,6 +7,14 @@ fine-tuning entry point in this repository to reconfigure; future training
 must consume this selection and exclude Geo-SAM and machine candidates.
 No model was trained or retrained by this change.
 
+## Primary map
+
+Sunil explicitly confirmed **Easburn** as the main map on 2026-09-07.
+Use `tw_1776_philadelphia_map_easburn_plan_v2_cog.tif` with these labels.
+Clarkson & Biddle is a legacy comparison source only; its pre-encoded
+features, chip grids, and extraction extents must not be reused for Easburn.
+Existing 1762 scripts are not an Easburn production pipeline.
+
 ## Verified source
 
 - NYC_Maps main, commit `29539f115351119f882525cf7397b4296ceb68de` (Gitea, not GitHub).

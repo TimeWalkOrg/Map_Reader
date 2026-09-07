@@ -2,6 +2,9 @@
 
 > **Training source update (2026-09-07):** Use Sunil’s 51 hand-drawn
 > `1776_philadelphia_building_parcels` from Easburn, **not Geo-SAM output**.
+> **Easburn v2 is the primary Philadelphia map.** Clarkson & Biddle
+> pipelines/results below are legacy comparisons, not the primary workflow.
+> Do not reuse their feature encodings or map-specific extents for Easburn.
 > See [training selection and import status](training/README.md). This
 > supersedes the earlier Geo-SAM-to-training recommendation below.
 

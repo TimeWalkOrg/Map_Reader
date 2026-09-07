@@ -8,7 +8,7 @@
   "source_commit": "29539f115351119f882525cf7397b4296ceb68de",
   "source_crs": "EPSG:3857",
   "source_raster": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
-  "source_raster_evidence": "Source commit describes Easburn; committed QGIS project points Easburn layer to v2.",
+  "source_raster_evidence": "Sunil explicitly confirmed Easburn as the primary map and source for these labels on 2026-09-07; source QGIS project references v2.",
   "exclude_label_origins": [
     "geosam",
     "machine_candidate"
@@ -23,5 +23,7 @@
     "Define annotated coverage or ignore mask; unlabeled space is not confirmed negative"
   ],
   "database_table": "timewalk.1776_philadelphia_building_parcels",
-  "database_import_status": "blocked_authentication"
+  "database_import_status": "blocked_authentication",
+  "primary_project_map": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+  "clarkson_biddle_role": "legacy_comparison_only_not_primary_training_source"
 }
