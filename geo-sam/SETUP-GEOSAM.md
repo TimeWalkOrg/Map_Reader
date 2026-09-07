@@ -90,8 +90,10 @@ needed.
 
 ## 7. Saving to GeoPackage with `source='geosam'`
 
-Save clicks into a GeoPackage so they double as **training labels** for the
-future MapSAM fine-tune (every accepted polygon = one training pair).
+**2026-09-07 update:** Sunil’s manual `1776_philadelphia_building_parcels`
+is the selected training source. His Geo-SAM layer is **excluded**; see
+[training selection](../training/README.md). Save Geo-SAM results separately
+for optional review, not as automatic training labels.
 
 Option A — let the plugin write its shapefile, then append to a GPKG:
 
@@ -106,7 +108,8 @@ output at it: layer `footprints_geosam`, fields `source` (text, default
 `'geosam'`), `source_map` (text, default `'tw_1762_clarkson_biddle_v2'`),
 `reviewed` (bool, default false). Then run QGIS field defaults on save.
 
-Keep everything you click — even rejects are useful negatives for training.
+Rejected proposals are not automatically negative training examples.
+Do not add this layer to Sunil’s selected manual-label dataset.
 When a batch is reviewed, we load it to PostGIS the usual way
 (`timewalk.sam_footprint_candidates`, see `Map_Reader/README.md`).
 

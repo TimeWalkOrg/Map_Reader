@@ -1,0 +1,27 @@
+{
+  "selected_layer": "1776_philadelphia_building_parcels",
+  "label_origin": "manual",
+  "digitizer": "Sunil Prabhu",
+  "feature_count": 51,
+  "dataset": "sunil_parcels_2026-09-07/1776_philadelphia_building_parcels.gpkg",
+  "source_repository": "https://k7oth9.gitea.cloud/TimeWalk/NYC_Maps",
+  "source_commit": "29539f115351119f882525cf7397b4296ceb68de",
+  "source_crs": "EPSG:3857",
+  "source_raster": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+  "source_raster_evidence": "Source commit describes Easburn; committed QGIS project points Easburn layer to v2.",
+  "exclude_label_origins": [
+    "geosam",
+    "machine_candidate"
+  ],
+  "split": "unassigned",
+  "label_coverage": "positive_parcels_only_not_exhaustive_tiles",
+  "training_run_started": false,
+  "pretraining_requirements": [
+    "Pin and verify Easburn raster hash/grid against labels",
+    "Review overlap between source rows 41 and 42 (0.65 m2)",
+    "Create spatial train/validation split; keep held-out benchmark independent",
+    "Define annotated coverage or ignore mask; unlabeled space is not confirmed negative"
+  ],
+  "database_table": "timewalk.1776_philadelphia_building_parcels",
+  "database_import_status": "blocked_authentication"
+}

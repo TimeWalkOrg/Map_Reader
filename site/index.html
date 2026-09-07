@@ -131,10 +131,11 @@ tools produce.
 <tr><td>—</td><td>MapReader</td><td>corpus triage: which sheets are worth the effort</td><td>—</td></tr>
 <tr><td>—</td><td>mapKurator</td><td>attribute enrichment from map labels</td><td>—</td></tr>
 </table>
-<p><b>Recommended sequence:</b> run the interactive Geo-SAM pass now to get real footprints
-into PostGIS; keep every accepted polygon as a training pair; once enough accumulate,
-fine-tune MapSAM on PC-5090's RTX&nbsp;5090 with those pairs and move to prompt-free batch
-extraction; keep samgeo as the scripted layer that runs and scores both.</p>
+<p><b>Training update (2026-09-07):</b> Sunil’s 51 manually drawn
+<code>1776_philadelphia_building_parcels</code> are the selected training source;
+his Geo-SAM output is excluded. Verify Easburn raster alignment, annotated
+coverage, and spatial validation splits before fine-tuning. No training run
+has started. Database import is prepared but blocked on authentication.</p>
 
 <h2>Pilot: 1762 Clarkson &amp; Biddle, Philadelphia</h2>
 <p>We ran the scripted samgeo flow against a map we had already hand-traced, so we

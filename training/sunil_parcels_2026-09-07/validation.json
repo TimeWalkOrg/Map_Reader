@@ -1,0 +1,31 @@
+{
+  "count": 51,
+  "valid": 51,
+  "crs": "EPSG:3857",
+  "empty": 0,
+  "exact_duplicates": 0,
+  "overlaps_over_0_01_m2": [
+    {
+      "source_row_a": 41,
+      "source_row_b": 42,
+      "area_m2": 0.6533141960834286
+    }
+  ],
+  "bounds_wgs84": [
+    -75.15442678360004,
+    39.93420781007562,
+    -75.13892508824284,
+    39.959440490163054
+  ],
+  "original_id_null_count": 51,
+  "source_files_sha256": {
+    "1776_philadelphia_building_parcels.cpg": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+    "1776_philadelphia_building_parcels.dbf": "9b16c435d741c634719e465cc5fa289a5be8b70ccddc95216700dfa1bacbbaa4",
+    "1776_philadelphia_building_parcels.prj": "f2e7fb14d55bdd8d6a3bc2c272a48729d8f9d0ad72936e20eae6a9a81c2fccd0",
+    "1776_philadelphia_building_parcels.shp": "02b3aea3a93a9c68fcfae79241de37af1bec6e1db83faa95e405ff430e9b52da",
+    "1776_philadelphia_building_parcels.shx": "8b6d1f5edb3335fb185626c1e276adb05e0bb7cf5fa1cee9857fbe487f9485d9"
+  },
+  "dataset_sha256": "cb06cf16d9f7d37edd8ce9f901588bd80da57845869f75db4d41302d7f5c8c2b",
+  "gpkg_geometry_roundtrip_exact": true,
+  "database_import_status": "blocked_authentication"
+}
