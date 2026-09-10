@@ -1,4 +1,4 @@
--- Prepared only; no import has been performed.
+-- Applied 2026-09-10 18:41 UTC against Supabase (table did not pre-exist); 51 rows, valid, SRID 3857. RLS policy read_all + SELECT grants (anon, authenticated, qwen_readonly) added afterwards, matching the other Philly layers.
 -- Pinned NYC_Maps main commit 29539f1; source SHA256 cb06cf16d9f7d37edd8ce9f901588bd80da57845869f75db4d41302d7f5c8c2b.
 -- Run this entire file in one authenticated PostGIS session.
 BEGIN;

@@ -7,12 +7,16 @@ Run this ONCE after unzipping, pointing it at the folder that contains
 manifest.parquet. Requires geopandas + pyarrow (both are installed by the
 Geo-SAM plugin, so the QGIS Python console works).
 
-CLI:
-    python fix_manifest_paths.py /path/to/tw_1762_philadelphia_map_clarkson_biddle_v2_cog
+Works for every TimeWalk package (Easburn 1776 v2, Clarkson & Biddle 1762 v2, ...).
 
-QGIS Python console (Plugins > Python Console):
-    FEATURE_DIR = r"C:/path/to/tw_1762_philadelphia_map_clarkson_biddle_v2_cog"
-    exec(open(r"C:/path/to/fix_manifest_paths.py").read())
+CLI:
+    python fix_manifest_paths.py /path/to/tw_1776_philadelphia_map_easburn_plan_v2_cog
+
+QGIS Python console (Plugins > Python Console) -- pickers, nothing to edit:
+    from qgis.PyQt.QtWidgets import QFileDialog
+    FEATURE_DIR = QFileDialog.getExistingDirectory(None, "Pick the folder that contains manifest.parquet")
+    FIXER = QFileDialog.getOpenFileName(None, "Pick fix_manifest_paths.py", "", "Python (*.py)")[0]
+    exec(open(FIXER).read())
 """
 
 from pathlib import Path

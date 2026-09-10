@@ -27,5 +27,37 @@
   },
   "dataset_sha256": "cb06cf16d9f7d37edd8ce9f901588bd80da57845869f75db4d41302d7f5c8c2b",
   "gpkg_geometry_roundtrip_exact": true,
-  "database_import_status": "blocked_authentication"
+  "database_import_status": "imported_2026-09-10",
+  "database_import": {
+    "imported_at_utc": "2026-09-10T18:41Z",
+    "table": "timewalk.1776_philadelphia_building_parcels",
+    "method": "import.sql (transactional, non-destructive; table did not pre-exist)",
+    "verified": {
+      "count": 51,
+      "valid": 51,
+      "srid": [
+        3857
+      ],
+      "geom_types": [
+        "MULTIPOLYGON"
+      ],
+      "distinct_source_rows": 51,
+      "total_area_3857_m2": 26041.9,
+      "anon_visible_rows": 51
+    },
+    "rls": {
+      "enabled": true,
+      "policy": "read_all SELECT to anon, authenticated USING (true)"
+    },
+    "grants": {
+      "anon": "SELECT",
+      "authenticated": "SELECT",
+      "qwen_readonly": "SELECT"
+    },
+    "indexes": [
+      "pkey",
+      "UNIQUE(dataset_sha256,source_row)",
+      "gist geom"
+    ]
+  }
 }
