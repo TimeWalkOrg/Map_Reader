@@ -1,0 +1,57 @@
+table_name,ordinal_position,column_name,data_type,udt_name,is_nullable
+1776_nyc_parcels_buildings,1,id,integer,int4,NO
+1776_nyc_parcels_buildings,2,name,text,text,YES
+1776_nyc_parcels_buildings,3,owner,text,text,YES
+1776_nyc_parcels_buildings,4,geom,USER-DEFINED,geometry,YES
+1776_nyc_parcels_buildings,5,building_type,text,text,YES
+1776_nyc_parcels_buildings,6,built_date,date,date,YES
+1776_nyc_parcels_buildings,7,replaced_date,date,date,YES
+1776_nyc_parcels_buildings,8,built_date_confidence_pct,integer,int4,YES
+1776_nyc_parcels_buildings,9,replaced_date_confidence_pct,integer,int4,YES
+1776_nyc_parcels_buildings,10,source,text,text,YES
+1776_nyc_parcels_buildings,11,timewalk_notes,text,text,YES
+1776_nyc_parcels_buildings,12,street_address,text,text,YES
+1776_nyc_parcels_buildings,13,num_floors,integer,int4,YES
+1776_nyc_parcels_buildings,14,material,text,text,YES
+1776_nyc_parcels_buildings,15,roof_type,text,text,YES
+1776_nyc_parcels_buildings,16,fire_damage,text,text,YES
+1776_nyc_parcels_buildings,17,confidence_notes,text,text,YES
+1776_nyc_parcels_buildings,18,house_number,integer,int4,YES
+1776_nyc_parcels_buildings,19,address_generated,boolean,bool,YES
+1776_nyc_parcels_buildings,20,building_type_original,text,text,YES
+1776_nyc_parcels_buildings,21,building_color,text,text,YES
+1776_nyc_parcels_buildings,22,timewalk_id,text,text,YES
+1776_nyc_parcels_buildings,23,live_model_id,bigint,int8,YES
+1776_nyc_parcels_landmarks,1,id,integer,int4,NO
+1776_nyc_parcels_landmarks,2,owner,character varying,varchar,YES
+1776_nyc_parcels_landmarks,3,name,character varying,varchar,YES
+1776_nyc_parcels_landmarks,4,building_type,character varying,varchar,YES
+1776_nyc_parcels_landmarks,5,built_date,date,date,YES
+1776_nyc_parcels_landmarks,6,built_date_confidence_pct,bigint,int8,YES
+1776_nyc_parcels_landmarks,7,replaced_date,date,date,YES
+1776_nyc_parcels_landmarks,8,replaced_date_confidence_pct,bigint,int8,YES
+1776_nyc_parcels_landmarks,9,fire (y/n),character varying,varchar,YES
+1776_nyc_parcels_landmarks,10,timewalk_notes,text,text,YES
+1776_nyc_parcels_landmarks,11,source,character varying,varchar,YES
+1776_nyc_parcels_landmarks,12,geom,USER-DEFINED,geometry,YES
+1776_nyc_parcels_landmarks,13,timewalk_id,text,text,YES
+1776_nyc_parcels_landmarks,14,live_model_id,bigint,int8,YES
+1776_nyc_vector_road_graph,1,ogc_fid,integer,int4,NO
+1776_nyc_vector_road_graph,2,cnnctnstrt,character varying,varchar,YES
+1776_nyc_vector_road_graph,3,cnnctnnd,character varying,varchar,YES
+1776_nyc_vector_road_graph,4,rulefile,character varying,varchar,YES
+1776_nyc_vector_road_graph,5,startrule,character varying,varchar,YES
+1776_nyc_vector_road_graph,6,name_2,character varying,varchar,YES
+1776_nyc_vector_road_graph,7,name,character varying,varchar,YES
+1776_nyc_vector_road_graph,8,type,character varying,varchar,YES
+1776_nyc_vector_road_graph,9,fid,numeric,numeric,YES
+1776_nyc_vector_road_graph,10,randomseed,numeric,numeric,YES
+1776_nyc_vector_road_graph,11,strtwdth,numeric,numeric,YES
+1776_nyc_vector_road_graph,12,sdwlkwdthr,numeric,numeric,YES
+1776_nyc_vector_road_graph,13,precision,numeric,numeric,YES
+1776_nyc_vector_road_graph,14,sdwlkwdthl,numeric,numeric,YES
+1776_nyc_vector_road_graph,15,lanewidth,numeric,numeric,YES
+1776_nyc_vector_road_graph,16,shape__id,numeric,numeric,YES
+1776_nyc_vector_road_graph,17,strtffst,numeric,numeric,YES
+1776_nyc_vector_road_graph,18,shpcrtn,boolean,bool,YES
+1776_nyc_vector_road_graph,19,geom,USER-DEFINED,geometry,YES

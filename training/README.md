@@ -1,3 +1,21 @@
+# Training-label selection
+
+`active_dataset.json` (schema v2, multi-source, 2026-09-10) now lists three sources:
+
+| source | role | task |
+|---|---|---|
+| Easburn 51 (Philadelphia, Sunil manual) | primary Easburn set **and** held-out cross-map validation | polygon segmentation |
+| NYC 1776 fire map — buildings + landmarks | training, **weak labels** (not pixel-traced; see QA) | polygon segmentation |
+| NYC 1776 fire map — road graph | separate line-extraction set | line extraction |
+
+The NYC package, QA and proposed block-level split live in
+[sunil_nyc_1776_fire_map_2026-09-10](sunil_nyc_1776_fire_map_2026-09-10/) (its README has the
+numbers). Headline: buildings sit in the right blocks but their edges do not follow the plate's
+drawn lot cells (best-cell IoU median 0.21, ink gain vs shifted baseline 0.00); only 10 of 261
+blocks are exhaustively labeled, so negatives may only be sampled there. Landmarks are
+plate-derived but approximate; the road graph follows the corridors within ~1 m median.
+No training run has been started.
+
 # Philadelphia training-label selection — 2026-09-07
 
 Sunil requested that his manually drawn `1776_philadelphia_building_parcels`
@@ -36,7 +54,7 @@ Existing 1762 scripts are not an Easburn production pipeline.
 shapefile components, lossless GeoPackage, validation report, and transaction
 SQL for `timewalk."1776_philadelphia_building_parcels"`.
 
-**Database status: NOT IMPORTED.** A direct connection probe returned “no
+**Database status: imported 2026-09-10** (see validation.json). Earlier note: a direct connection probe returned “no
 password supplied”; no supported authenticated connection was available.
 The protected credential request received no answer. No database or QGIS
 project changes were made.

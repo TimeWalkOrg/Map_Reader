@@ -1,0 +1,9 @@
+relname,idx,def
+1776_nyc_parcels_buildings,"timewalk.""1776_nyc_parcels_buildings_geom_geom_idx""","CREATE INDEX ""1776_nyc_parcels_buildings_geom_geom_idx"" ON timewalk.""1776_nyc_parcels_buildings"" USING gist (geom)"
+1776_nyc_parcels_buildings,"timewalk.""1776_nyc_parcels_buildings_pkey""","CREATE UNIQUE INDEX ""1776_nyc_parcels_buildings_pkey"" ON timewalk.""1776_nyc_parcels_buildings"" USING btree (id)"
+1776_nyc_parcels_buildings,"timewalk.""1776_nyc_parcels_buildings_timewalk_id_key""","CREATE UNIQUE INDEX ""1776_nyc_parcels_buildings_timewalk_id_key"" ON timewalk.""1776_nyc_parcels_buildings"" USING btree (timewalk_id)"
+1776_nyc_parcels_landmarks,"timewalk.""1776_nyc_parcels_landmarks_geom_geom_idx""","CREATE INDEX ""1776_nyc_parcels_landmarks_geom_geom_idx"" ON timewalk.""1776_nyc_parcels_landmarks"" USING gist (geom)"
+1776_nyc_parcels_landmarks,"timewalk.""1776_nyc_parcels_landmarks_pkey""","CREATE UNIQUE INDEX ""1776_nyc_parcels_landmarks_pkey"" ON timewalk.""1776_nyc_parcels_landmarks"" USING btree (id)"
+1776_nyc_parcels_landmarks,"timewalk.""1776_nyc_parcels_landmarks_timewalk_id_key""","CREATE UNIQUE INDEX ""1776_nyc_parcels_landmarks_timewalk_id_key"" ON timewalk.""1776_nyc_parcels_landmarks"" USING btree (timewalk_id)"
+1776_nyc_vector_road_graph,"timewalk.""1776_nyc_vector_road_graph_geom_idx""","CREATE INDEX ""1776_nyc_vector_road_graph_geom_idx"" ON timewalk.""1776_nyc_vector_road_graph"" USING gist (geom)"
+1776_nyc_vector_road_graph,"timewalk.""1776_nyc_vector_road_graph_pkey1""","CREATE UNIQUE INDEX ""1776_nyc_vector_road_graph_pkey1"" ON timewalk.""1776_nyc_vector_road_graph"" USING btree (ogc_fid)"

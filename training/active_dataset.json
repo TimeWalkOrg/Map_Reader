@@ -1,29 +1,128 @@
 {
-  "selected_layer": "1776_philadelphia_building_parcels",
-  "label_origin": "manual",
-  "digitizer": "Sunil Prabhu",
-  "feature_count": 51,
-  "dataset": "sunil_parcels_2026-09-07/1776_philadelphia_building_parcels.gpkg",
-  "source_repository": "https://k7oth9.gitea.cloud/TimeWalk/NYC_Maps",
-  "source_commit": "29539f115351119f882525cf7397b4296ceb68de",
-  "source_crs": "EPSG:3857",
-  "source_raster": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
-  "source_raster_evidence": "Sunil explicitly confirmed Easburn as the primary map and source for these labels on 2026-09-07; source QGIS project references v2.",
+  "schema": "map_reader.training.active_dataset/v2-multi-source",
+  "updated": "2026-09-10",
+  "training_run_started": false,
   "exclude_label_origins": [
     "geosam",
     "machine_candidate"
   ],
-  "split": "unassigned",
-  "label_coverage": "positive_parcels_only_not_exhaustive_tiles",
-  "training_run_started": false,
-  "pretraining_requirements": [
-    "Pin and verify Easburn raster hash/grid against labels",
-    "Review overlap between source rows 41 and 42 (0.65 m2)",
-    "Create spatial train/validation split; keep held-out benchmark independent",
-    "Define annotated coverage or ignore mask; unlabeled space is not confirmed negative"
-  ],
-  "database_table": "timewalk.1776_philadelphia_building_parcels",
-  "database_import_status": "blocked_authentication",
-  "primary_project_map": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
-  "clarkson_biddle_role": "legacy_comparison_only_not_primary_training_source"
+  "sources": [
+    {
+      "name": "easburn_philadelphia_1776_sunil_manual",
+      "role": "primary_easburn_set_and_held_out_cross_map_validation",
+      "task": "polygon_segmentation",
+      "selected_layer": "1776_philadelphia_building_parcels",
+      "label_origin": "manual",
+      "digitizer": "Sunil Prabhu",
+      "feature_count": 51,
+      "dataset": "sunil_parcels_2026-09-07/1776_philadelphia_building_parcels.gpkg",
+      "source_repository": "https://k7oth9.gitea.cloud/TimeWalk/NYC_Maps",
+      "source_commit": "29539f115351119f882525cf7397b4296ceb68de",
+      "source_crs": "EPSG:3857",
+      "source_raster": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+      "source_raster_evidence": "Sunil explicitly confirmed Easburn as the primary map and source for these labels on 2026-09-07; source QGIS project references v2.",
+      "split": "held_out_cross_map_validation",
+      "label_coverage": "positive_parcels_only_not_exhaustive_tiles",
+      "database_table": "timewalk.1776_philadelphia_building_parcels",
+      "database_import_status": "imported_2026-09-10",
+      "primary_project_map": "tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+      "clarkson_biddle_role": "legacy_comparison_only_not_primary_training_source",
+      "pretraining_requirements": [
+        "Pin and verify Easburn raster hash/grid against labels",
+        "Review overlap between source rows 41 and 42 (0.65 m2)",
+        "Define annotated coverage or ignore mask; unlabeled space is not confirmed negative"
+      ]
+    },
+    {
+      "name": "nyc_1776_fire_map_sunil_buildings_landmarks",
+      "role": "polygon_segmentation_training_weak_labels",
+      "task": "polygon_segmentation",
+      "selected_layers": [
+        "1776_nyc_parcels_buildings",
+        "1776_nyc_parcels_landmarks"
+      ],
+      "label_origin": "sunil_postgis_vectors_not_pixel_traced",
+      "digitizer": "Sunil Prabhu (per Slack C08BNQJQB1P 1789070222.107089, 2026-09-10)",
+      "feature_count": {
+        "buildings": 2733,
+        "landmarks": 62
+      },
+      "datasets": [
+        "sunil_nyc_1776_fire_map_2026-09-10/1776_nyc_parcels_buildings.gpkg",
+        "sunil_nyc_1776_fire_map_2026-09-10/1776_nyc_parcels_landmarks.gpkg"
+      ],
+      "manifest": "sunil_nyc_1776_fire_map_2026-09-10/manifest.json",
+      "database_tables": [
+        "timewalk.1776_nyc_parcels_buildings",
+        "timewalk.1776_nyc_parcels_landmarks"
+      ],
+      "database_snapshot_utc": "2026-09-10 20:01:13",
+      "source_crs": "EPSG:3857",
+      "source_raster": "1776_nyc_map_fire_map_upscaled.tif",
+      "source_raster_path": "/Users/gabriel/NYC_Maps/raster/1776/1776_nyc_map_fire_map_upscaled.tif",
+      "source_raster_sha256": "7aae33bd7350b077d095a04e26a080b789f93929a6a56aa10098735a983ba08a",
+      "source_raster_grid": "8331x7788, EPSG:3857, 0.2893 m/px, origin (-8239760.3647, 4970603.3853)",
+      "source_raster_evidence": "QGIS layer 1776_nyc_map_fire_map_upscaled -> localized:raster/1776/1776_nyc_map_fire_map_upscaled.tif in TimeWalk_Maps.qgs (local + DB copy); landmark ids/names follow the plate key.",
+      "qa_verdict": "buildings NOT pixel-traced (best drawn-cell IoU median 0.21; ink gain vs 4 m shift 0.00; 226 off-plate; 140 on blank plate); landmarks plate-derived but approximate (24/61 on solid blobs, offset median 1.2 m); use as weak location labels / instance priors, not as footprint masks",
+      "label_coverage": "positives_only_except_10_exhaustive_blocks",
+      "negatives_allowed_blocks": "block_coverage.gpkg where cls == 'exhaustive' (10 blocks, 77294 ground m2, 196 building polygons)",
+      "split": "proposed_block_level_spatial",
+      "split_files": [
+        "sunil_nyc_1776_fire_map_2026-09-10/proposed_split_buildings.csv",
+        "sunil_nyc_1776_fire_map_2026-09-10/proposed_split_landmarks.csv",
+        "sunil_nyc_1776_fire_map_2026-09-10/block_coverage.gpkg"
+      ],
+      "split_counts": {
+        "buildings": {
+          "train": 2025,
+          "val": 481,
+          "excluded_off_plate": 227
+        },
+        "landmarks": {
+          "train": 51,
+          "val": 10,
+          "excluded_off_plate": 1
+        },
+        "blocks": {
+          "train": 183,
+          "val": 41,
+          "excluded_off_plate": 37
+        }
+      },
+      "flagged_for_review": {
+        "modern_proxy_suspect_buildings": 15,
+        "landmarks_not_on_ink_blob": [17, 25, 26, 38, 39, 44, 54, 60, 63, 72],
+        "invalid_geometry": ["landmarks id 54 Fish Market (self-intersection)"]
+      },
+      "pretraining_requirements": [
+        "Treat polygon edges as +/- several metres uncertain (weak labels); consider boundary-ignore band or cell-snapping before mask generation",
+        "Sample negatives only inside the 10 exhaustive blocks; elsewhere unlabeled ink is not confirmed negative",
+        "Exclude the 226 off-plate and 140 blank-plate polygons from mask generation",
+        "Review the 15 modern_proxy_suspect polygons and 10 landmarks not on ink",
+        "Do not mix with the road-graph line task"
+      ]
+    },
+    {
+      "name": "nyc_1776_fire_map_sunil_road_graph",
+      "role": "line_extraction_training_separate_task",
+      "task": "line_extraction",
+      "selected_layer": "1776_nyc_vector_road_graph",
+      "label_origin": "cityengine_street_graph_export",
+      "feature_count": 1590,
+      "dataset": "sunil_nyc_1776_fire_map_2026-09-10/1776_nyc_vector_road_graph.gpkg",
+      "manifest": "sunil_nyc_1776_fire_map_2026-09-10/manifest.json",
+      "database_table": "timewalk.1776_nyc_vector_road_graph",
+      "database_snapshot_utc": "2026-09-10 20:01:13",
+      "source_crs": "EPSG:3857 (MultiLineString Z)",
+      "source_raster": "1776_nyc_map_fire_map_upscaled.tif",
+      "source_raster_sha256": "7aae33bd7350b077d095a04e26a080b789f93929a6a56aa10098735a983ba08a",
+      "qa_verdict": "centerlines follow plate corridors: |offset| median 1.1 m ground, p90 2.9 m on 624 scorable corridor edges; 408 edges run through hatched ink (water/burnt district/piers)",
+      "split": "reuse block-level split from the polygon source (edges bounding val blocks -> val)",
+      "pretraining_requirements": [
+        "Rasterise with a >= 2 m tolerance buffer",
+        "Exclude or down-weight piers.cga edges over water hatching",
+        "Keep separate from the polygon segmentation task"
+      ]
+    }
+  ]
 }

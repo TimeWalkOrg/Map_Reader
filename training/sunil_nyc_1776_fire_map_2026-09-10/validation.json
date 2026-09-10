@@ -1,0 +1,269 @@
+{
+  "snapshot_utc": "2026-09-10 20:01:13.512322",
+  "layers": {
+    "1776_nyc_parcels_buildings": {
+      "source_table": "timewalk.\"1776_nyc_parcels_buildings\"",
+      "primary_key": "id",
+      "row_count": 2733,
+      "distinct_pk": 2733,
+      "columns": [
+        "id",
+        "name",
+        "owner",
+        "geom",
+        "building_type",
+        "built_date",
+        "replaced_date",
+        "built_date_confidence_pct",
+        "replaced_date_confidence_pct",
+        "source",
+        "timewalk_notes",
+        "street_address",
+        "num_floors",
+        "material",
+        "roof_type",
+        "fire_damage",
+        "confidence_notes",
+        "house_number",
+        "address_generated",
+        "building_type_original",
+        "building_color",
+        "timewalk_id",
+        "live_model_id"
+      ],
+      "column_types": {
+        "id": "integer",
+        "name": "text",
+        "owner": "text",
+        "geom": "USER-DEFINED",
+        "building_type": "text",
+        "built_date": "date",
+        "replaced_date": "date",
+        "built_date_confidence_pct": "integer",
+        "replaced_date_confidence_pct": "integer",
+        "source": "text",
+        "timewalk_notes": "text",
+        "street_address": "text",
+        "num_floors": "integer",
+        "material": "text",
+        "roof_type": "text",
+        "fire_damage": "text",
+        "confidence_notes": "text",
+        "house_number": "integer",
+        "address_generated": "boolean",
+        "building_type_original": "text",
+        "building_color": "text",
+        "timewalk_id": "text",
+        "live_model_id": "bigint"
+      },
+      "srid": 3857,
+      "geometry_types": [
+        "MultiPolygon"
+      ],
+      "has_z": false,
+      "valid": 2733,
+      "invalid_ids": [],
+      "invalid_reasons": [],
+      "empty": 0,
+      "exact_duplicate_geometries": 0,
+      "bounds_epsg3857": [
+        -8239304.4520315835,
+        4968476.922199357,
+        -8236628.55480957,
+        4970781.097167969
+      ],
+      "bounds_wgs84": [
+        -74.01493119773988,
+        40.70194089175122,
+        -73.99089320400722,
+        40.71763102362072
+      ],
+      "csv_sha256": "d82e010b8f3a3242b90d1520d3cde315cbe587a99857d851de34a9a62a1bb4f3",
+      "gpkg_sha256": "04baee14735f4ae8c317f1d5e570d8d971e9dd57a98afd5abcf0830936fa4905",
+      "gpkg_geometry_roundtrip_exact": true,
+      "gpkg_attribute_mismatch_cells": 0,
+      "area_utm18n_m2": {
+        "min": 44.87264684690984,
+        "median": 118.99961249231133,
+        "max": 905.2773238085265,
+        "total": 422167.76215618197
+      },
+      "vertices_per_feature_mean": 7.67178924259056,
+      "overlapping_pairs_over_1_m2": 2,
+      "overlaps_over_1_m2": [
+        {
+          "id_a": 7315,
+          "id_b": 7346,
+          "area_m2": 2.98
+        },
+        {
+          "id_a": 7350,
+          "id_b": 7351,
+          "area_m2": 2.16
+        }
+      ],
+      "overlap_total_m2": 5.14
+    },
+    "1776_nyc_parcels_landmarks": {
+      "source_table": "timewalk.\"1776_nyc_parcels_landmarks\"",
+      "primary_key": "id",
+      "row_count": 62,
+      "distinct_pk": 62,
+      "columns": [
+        "id",
+        "owner",
+        "name",
+        "building_type",
+        "built_date",
+        "built_date_confidence_pct",
+        "replaced_date",
+        "replaced_date_confidence_pct",
+        "fire (y/n)",
+        "timewalk_notes",
+        "source",
+        "geom",
+        "timewalk_id",
+        "live_model_id"
+      ],
+      "column_types": {
+        "id": "integer",
+        "owner": "character varying",
+        "name": "character varying",
+        "building_type": "character varying",
+        "built_date": "date",
+        "built_date_confidence_pct": "bigint",
+        "replaced_date": "date",
+        "replaced_date_confidence_pct": "bigint",
+        "fire (y/n)": "character varying",
+        "timewalk_notes": "text",
+        "source": "character varying",
+        "geom": "USER-DEFINED",
+        "timewalk_id": "text",
+        "live_model_id": "bigint"
+      },
+      "srid": 3857,
+      "geometry_types": [
+        "MultiPolygon"
+      ],
+      "has_z": false,
+      "valid": 61,
+      "invalid_ids": [
+        54
+      ],
+      "invalid_reasons": [
+        "Self-intersection[-8238822.36982256 4968735.5958019]"
+      ],
+      "empty": 0,
+      "exact_duplicate_geometries": 0,
+      "bounds_epsg3857": [
+        -8239265.383066834,
+        4968525.365896579,
+        -8237388.282903314,
+        4970489.641668639
+      ],
+      "bounds_wgs84": [
+        -74.01458023525821,
+        40.70227080405041,
+        -73.99771795759106,
+        40.7156465803081
+      ],
+      "csv_sha256": "c42fbd46c566742cd04e9b133cbe355a7a7e9166c65d8390474858fbad7958f8",
+      "gpkg_sha256": "1486323b169a79298afd7ea6a237e68afbcccf7696382e4a9fef9685e7c082cd",
+      "gpkg_geometry_roundtrip_exact": true,
+      "gpkg_attribute_mismatch_cells": 0,
+      "area_utm18n_m2": {
+        "min": 52.47249515685327,
+        "median": 335.74310140594764,
+        "max": 15906.078195100054,
+        "total": 53523.19913182537
+      },
+      "vertices_per_feature_mean": 5.629032258064516,
+      "overlapping_pairs_over_1_m2": 0,
+      "overlaps_over_1_m2": [],
+      "overlap_total_m2": 0.0
+    },
+    "1776_nyc_vector_road_graph": {
+      "source_table": "timewalk.\"1776_nyc_vector_road_graph\"",
+      "primary_key": "ogc_fid",
+      "row_count": 1590,
+      "distinct_pk": 1590,
+      "columns": [
+        "ogc_fid",
+        "cnnctnstrt",
+        "cnnctnnd",
+        "rulefile",
+        "startrule",
+        "name_2",
+        "name",
+        "type",
+        "fid",
+        "randomseed",
+        "strtwdth",
+        "sdwlkwdthr",
+        "precision",
+        "sdwlkwdthl",
+        "lanewidth",
+        "shape__id",
+        "strtffst",
+        "shpcrtn",
+        "geom"
+      ],
+      "column_types": {
+        "ogc_fid": "integer",
+        "cnnctnstrt": "character varying",
+        "cnnctnnd": "character varying",
+        "rulefile": "character varying",
+        "startrule": "character varying",
+        "name_2": "character varying",
+        "name": "character varying",
+        "type": "character varying",
+        "fid": "numeric",
+        "randomseed": "numeric",
+        "strtwdth": "numeric",
+        "sdwlkwdthr": "numeric",
+        "precision": "numeric",
+        "sdwlkwdthl": "numeric",
+        "lanewidth": "numeric",
+        "shape__id": "numeric",
+        "strtffst": "numeric",
+        "shpcrtn": "boolean",
+        "geom": "USER-DEFINED"
+      },
+      "srid": 3857,
+      "geometry_types": [
+        "MultiLineString"
+      ],
+      "has_z": true,
+      "valid": 1590,
+      "invalid_ids": [],
+      "invalid_reasons": [],
+      "empty": 0,
+      "exact_duplicate_geometries": 0,
+      "bounds_epsg3857": [
+        -8239366.5,
+        4968468.0,
+        -8236331.0,
+        4970934.25
+      ],
+      "bounds_wgs84": [
+        -74.01548858412366,
+        40.70188012942083,
+        -73.98822022367422,
+        40.71867377698794
+      ],
+      "csv_sha256": "b872b81f160db890c78f69874e16cf5c1b23941e90c5c1da7a4108fa79469d90",
+      "gpkg_sha256": "0f351fab1b4ed0f5b47c8822445bde0947fd362bed519d1a079f76f31b7b1931",
+      "gpkg_geometry_roundtrip_exact": true,
+      "gpkg_attribute_mismatch_cells": 0,
+      "total_length_utm18n_m": 49156.63052417398
+    }
+  },
+  "export_sha256": {
+    "1776_nyc_parcels_buildings.csv": "d82e010b8f3a3242b90d1520d3cde315cbe587a99857d851de34a9a62a1bb4f3",
+    "1776_nyc_parcels_landmarks.csv": "c42fbd46c566742cd04e9b133cbe355a7a7e9166c65d8390474858fbad7958f8",
+    "1776_nyc_vector_road_graph.csv": "b872b81f160db890c78f69874e16cf5c1b23941e90c5c1da7a4108fa79469d90",
+    "columns.csv": "35b05fd79773384ffc6a751e9aefff93b54f73e5cc0248e0ece5daf12ccab292",
+    "indexes.csv": "69b008bcb71486ced9370c296a59d77714a4789aa1143c951f0c831781b4e160",
+    "snapshot_utc.txt": "c26d9ea40d227c8d37bba0b6ebc7ff53b4d450dfe316c63bc1a94a0a6ae2d4a5"
+  }
+}

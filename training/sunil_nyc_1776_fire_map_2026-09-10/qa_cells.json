@@ -1,0 +1,79 @@
+{
+  "stroke_half_width_px": 6.082762530298219,
+  "n_drawn_cells_on_plate": 4203,
+  "thin_hatch_strips_dropped": 586,
+  "drawn_cell_area_ground_m2": {
+    "p10": 14.965623953322178,
+    "median": 37.943050447208215,
+    "p90": 96.50711487637197
+  },
+  "buildings": {
+    "n": 2733,
+    "best_cell_iou_median": 0.21353477895210313,
+    "best_cell_iou_ge_0_5": 133,
+    "best_cell_iou_ge_0_7": 5,
+    "union_cell_iou_median": 0.24641468978758813,
+    "cells_spanned_distribution": {
+      "0.0": 839,
+      "1.0": 902,
+      "2.0": 465,
+      "3.0": 157,
+      "4.0": 77,
+      "5.0": 67
+    },
+    "blank_plate": 140,
+    "in_fire_zone": 415,
+    "best_cell_iou_median_fire_zone": 0.28299590671370123,
+    "best_cell_iou_median_outside_fire_zone": 0.1979137429948386,
+    "polygon_area_ground_m2_median": 117.80988949762894,
+    "class_counts": {
+      "loose_placement": 2115,
+      "off_plate": 226,
+      "blank_plate": 140,
+      "traced_single_cell": 133,
+      "traced_merged_cells": 119
+    }
+  },
+  "landmarks": {
+    "n": 62,
+    "best_cell_iou_median": 0.0,
+    "best_cell_iou_ge_0_5": 4,
+    "best_cell_iou_ge_0_7": 2,
+    "union_cell_iou_median": 0.0,
+    "cells_spanned_distribution": {
+      "0.0": 39,
+      "1.0": 7,
+      "2.0": 8,
+      "3.0": 2,
+      "5.0": 5
+    },
+    "blank_plate": 2,
+    "in_fire_zone": 4,
+    "best_cell_iou_median_fire_zone": 0.15470125955219877,
+    "best_cell_iou_median_outside_fire_zone": 0.0,
+    "polygon_area_ground_m2_median": 333.48360837638256,
+    "class_counts": {
+      "loose_placement": 53,
+      "traced_single_cell": 4,
+      "blank_plate": 2,
+      "traced_merged_cells": 2,
+      "off_plate": 1
+    }
+  },
+  "coverage": {
+    "n_blocks": 261,
+    "class_counts": {
+      "partial": 101,
+      "sparse": 74,
+      "no_drawn_cells": 39,
+      "off_plate": 37,
+      "exhaustive": 10
+    },
+    "cells_total": 4101,
+    "cells_covered": 2126,
+    "cells_covered_frac_overall": 0.5184101438673494,
+    "exhaustive_block_area_ground_m2": 77294.19165323897,
+    "buildings_with_centroid_in_exhaustive_blocks": 196,
+    "buildings_in_partial_blocks": 1979
+  }
+}
