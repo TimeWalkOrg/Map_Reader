@@ -1,0 +1,15 @@
+{
+ "which": "easburn",
+ "seconds": 117.2,
+ "n_roads": 771,
+ "road_km": 32.62380369530556,
+ "n_buildings": 417,
+ "n_oversize": 81,
+ "all_valid_roads": true,
+ "all_valid_buildings": true,
+ "crs": "EPSG:3857",
+ "building_threshold": 0.5,
+ "road_threshold": 0.4,
+ "win": 512,
+ "overlap": 64
+}

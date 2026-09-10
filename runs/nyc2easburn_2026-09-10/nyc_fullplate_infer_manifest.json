@@ -1,0 +1,15 @@
+{
+ "which": "nyc",
+ "seconds": 75.3,
+ "n_roads": 548,
+ "road_km": 31.63916460193349,
+ "n_buildings": 61,
+ "n_oversize": 34,
+ "all_valid_roads": true,
+ "all_valid_buildings": true,
+ "crs": "EPSG:3857",
+ "building_threshold": 0.5,
+ "road_threshold": 0.4,
+ "win": 512,
+ "overlap": 64
+}

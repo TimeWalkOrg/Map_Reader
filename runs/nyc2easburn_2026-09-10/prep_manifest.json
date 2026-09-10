@@ -1,0 +1,80 @@
+{
+ "res_m_per_px_3857": 0.5,
+ "tile": 320,
+ "stride": 160,
+ "roads_target": "v3 corridor: only qa_roads-scorable edges (n>=3, width>=2 m) buffered clip(0.45*measured width,2,7) m, ignore band +2.5 m; unscorable graph edges ignored (12 m). v1 thin 2 m centerline: val IoU ~0.10; v2 all-edge corridor: val IoU ~0.20 (undrawn NE streets taught as roads)",
+ "buildings_target": "weak polygons eroded 3 m = positives; negatives only exhaustive blocks + road corridor(3 m); ignore elsewhere",
+ "nyc_raster": {
+  "path": "/Users/gabriel/NYC_Maps/raster/1776/1776_nyc_map_fire_map_upscaled.tif",
+  "sha256": "7aae33bd7350b077d095a04e26a080b789f93929a6a56aa10098735a983ba08a",
+  "src_size": [
+   8331,
+   7788
+  ],
+  "src_res": 0.289298819994178,
+  "crs": "EPSG:3857",
+  "src_transform": [
+   0.289298819994178,
+   0.0,
+   -8239760.364740431,
+   0.0,
+   -0.289298819994178,
+   4970603.385257988
+  ],
+  "out_size": [
+   4820,
+   4506
+  ],
+  "out_res": 0.5,
+  "out_transform": [
+   0.5000308027741696,
+   0.0,
+   -8239760.364740431,
+   0.0,
+   -0.5000131402828802,
+   4970603.385257988
+  ]
+ },
+ "nyc_tiles": {
+  "n_train": 302,
+  "n_val": 168,
+  "buildings_used": 2353,
+  "landmarks_used": 51,
+  "roads_edges_used": 530,
+  "roads_edges_ignored_no_drawn_corridor": 773,
+  "roads_edges_ignored_other_rulefiles": 287,
+  "off_plate_frac": 0.20817978057840814
+ },
+ "easburn_raster": {
+  "path": "/Users/gabriel/.openclaw/workspace-timewalker/philly_georef_work/tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+  "sha256": "7f2d55093bc871e547014cd71b2e2d046505274521b7d21abaa8fec0ac1ae99c",
+  "src_size": [
+   8864,
+   14614
+  ],
+  "src_res": 0.369387500580846,
+  "crs": "EPSG:3857",
+  "src_transform": [
+   0.369387500580846,
+   0.0,
+   -8366409.621,
+   0.0,
+   -0.369387500580846,
+   4860200.233
+  ],
+  "out_size": [
+   6549,
+   10796
+  ],
+  "out_res": 0.5,
+  "out_transform": [
+   0.49996194917523573,
+   0.0,
+   -8366409.621,
+   0.0,
+   -0.5000212053990815,
+   4860200.233
+  ]
+ },
+ "prep_seconds": 15.5
+}

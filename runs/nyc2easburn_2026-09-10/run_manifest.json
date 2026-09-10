@@ -1,0 +1,386 @@
+{
+ "run": "nyc2easburn_2026-09-10",
+ "status": "machine_candidate_run_NOT_accepted_geometry",
+ "requested_by": "Sunil Prabhu, Slack C08BNQJQB1P thread 1789070222.107089",
+ "code_commit_before_run": "ac8bae1 (Map_Reader HEAD when run started)",
+ "code_commit_at_manifest": "ac8bae1c0d884c45da1439ee5fb03524366b610c",
+ "training_source": {
+  "dataset": "training/sunil_nyc_1776_fire_map_2026-09-10 (GPKG exports, manifest.json sha256s)",
+  "raster": {
+   "path": "/Users/gabriel/NYC_Maps/raster/1776/1776_nyc_map_fire_map_upscaled.tif",
+   "sha256": "7aae33bd7350b077d095a04e26a080b789f93929a6a56aa10098735a983ba08a",
+   "src_size": [
+    8331,
+    7788
+   ],
+   "src_res": 0.289298819994178,
+   "crs": "EPSG:3857",
+   "src_transform": [
+    0.289298819994178,
+    0.0,
+    -8239760.364740431,
+    0.0,
+    -0.289298819994178,
+    4970603.385257988
+   ],
+   "out_size": [
+    4820,
+    4506
+   ],
+   "out_res": 0.5,
+   "out_transform": [
+    0.5000308027741696,
+    0.0,
+    -8239760.364740431,
+    0.0,
+    -0.5000131402828802,
+    4970603.385257988
+   ]
+  },
+  "label_use": "buildings+landmarks = WEAK location labels (eroded 3 m, boundary ignore); negatives only in 10 exhaustive blocks + road corridors; roads = corridor mask from qa_roads-scorable edges only",
+  "split": "block-level spatial (val = NE band, 41 blocks) per proposed_split_*.csv; train tiles contain no val pixels",
+  "tiles": {
+   "n_train": 302,
+   "n_val": 168,
+   "buildings_used": 2353,
+   "landmarks_used": 51,
+   "roads_edges_used": 530,
+   "roads_edges_ignored_no_drawn_corridor": 773,
+   "roads_edges_ignored_other_rulefiles": 287,
+   "off_plate_frac": 0.20817978057840814
+  }
+ },
+ "target_raster": {
+  "path": "/Users/gabriel/.openclaw/workspace-timewalker/philly_georef_work/tw_1776_philadelphia_map_easburn_plan_v2_cog.tif",
+  "sha256": "7f2d55093bc871e547014cd71b2e2d046505274521b7d21abaa8fec0ac1ae99c",
+  "src_size": [
+   8864,
+   14614
+  ],
+  "src_res": 0.369387500580846,
+  "crs": "EPSG:3857",
+  "src_transform": [
+   0.369387500580846,
+   0.0,
+   -8366409.621,
+   0.0,
+   -0.369387500580846,
+   4860200.233
+  ],
+  "out_size": [
+   6549,
+   10796
+  ],
+  "out_res": 0.5,
+  "out_transform": [
+   0.49996194917523573,
+   0.0,
+   -8366409.621,
+   0.0,
+   -0.5000212053990815,
+   4860200.233
+  ]
+ },
+ "common_grid": {
+  "res_m_per_px_epsg3857": 0.5,
+  "preprocessing": "grayscale -> background-normalised darkness (close41+blur41) + adaptive-threshold binary ink (block 41, C 18); 2 channels"
+ },
+ "models": {
+  "roads": {
+   "arch": "UNet base32 depth5, 7.76M params, 2-ch input",
+   "device": "NVIDIA GeForce RTX 5090",
+   "torch": "2.9.1+cu128",
+   "iters": 5000,
+   "seconds": 505.4,
+   "best_val_iou_weak_labels": 0.42384188660214694,
+   "n_train_tiles": 302,
+   "n_val_tiles": 159,
+   "checkpoint": "ckpt/roads_best.pt",
+   "checkpoint_sha256": "013ff6154bc975cc20399bc59b0ba3c8142a92f5ac0f7f9ccd830f88aeea69d4"
+  },
+  "buildings": {
+   "arch": "UNet base32 depth5, 7.76M params, 2-ch input",
+   "device": "NVIDIA GeForce RTX 5090",
+   "torch": "2.9.1+cu128",
+   "iters": 8000,
+   "seconds": 730.8,
+   "best_val_iou_weak_labels": 0.5213186147755441,
+   "n_train_tiles": 284,
+   "n_val_tiles": 166,
+   "checkpoint": "ckpt/buildings_best.pt",
+   "checkpoint_sha256": "bc8d4f074faab386b3604f4a73326f90d37c1eb41f3fa047bf0a73791917937a"
+  }
+ },
+ "roads_iterations": {
+  "v1": "thin 2 m centerline buffer on all roads.cga edges -> val IoU ~0.10 (log ckpt/roads_v1_train_log.json)",
+  "v2": "corridor (0.4*strtwdth) on all edges -> val IoU ~0.20 (undrawn NE streets taught as roads)",
+  "v3 (shipped)": "corridor on 530 qa_roads-scorable edges only, unscorable edges ignored -> best val IoU 0.42 @ iter 750"
+ },
+ "inference": {
+  "easburn": {
+   "which": "easburn",
+   "seconds": 117.2,
+   "n_roads": 771,
+   "road_km": 32.62380369530556,
+   "n_buildings": 417,
+   "n_oversize": 81,
+   "all_valid_roads": true,
+   "all_valid_buildings": true,
+   "crs": "EPSG:3857",
+   "building_threshold": 0.5,
+   "road_threshold": 0.4,
+   "win": 512,
+   "overlap": 64
+  },
+  "nyc_fullplate": {
+   "which": "nyc",
+   "seconds": 75.3,
+   "n_roads": 548,
+   "road_km": 31.63916460193349,
+   "n_buildings": 61,
+   "n_oversize": 34,
+   "all_valid_roads": true,
+   "all_valid_buildings": true,
+   "crs": "EPSG:3857",
+   "building_threshold": 0.5,
+   "road_threshold": 0.4,
+   "win": 512,
+   "overlap": 64
+  },
+  "easburn_instances": {
+   "n_components": 4220,
+   "n_blobs_after_filters": 1812,
+   "n_candidates": 1812,
+   "n_geosam_refined": 1704,
+   "geosam_seconds": 100.6,
+   "total_seconds": 103.4,
+   "filters": {
+    "area_m2": [
+     20,
+     6000
+    ],
+    "fill_min": 0.25,
+    "solidity_min": 0.55,
+    "close_px": 5,
+    "open_px": 5,
+    "road_gate": "unet roads prob>=0.5 dilated 2px"
+   },
+   "all_valid": true,
+   "crs": "EPSG:3857"
+  }
+ },
+ "geosam_features": {
+  "path": "geo-sam/features_easburn_sam_b (SAM-B, 213 chips, encode_easburn_run.json)",
+  "source_sha256_matches_target": true
+ },
+ "metrics": {
+  "easburn_buildings_vs_51_parcels__hybrid_instances": {
+   "n_pred": 65,
+   "n_ref": 51,
+   "tp": 22,
+   "precision": 0.3384615384615385,
+   "recall": 0.43137254901960786,
+   "f1": 0.3793103448275862,
+   "median_match_iou": 0.8548622927873523,
+   "median_best_iou": 0.2595607625428919,
+   "median_boundary_dist_m": 0.5780404250268439,
+   "n_merge_flag": 11,
+   "n_split_flag": 0,
+   "n_oversize_flag": 8,
+   "n_ref_any_overlap": 30,
+   "note": "precision indicative only: candidates counted if inside parcels buffered 25 m or touching a parcel; parcels are positives-only, not exhaustive",
+   "n_candidates_whole_plate": 1812,
+   "n_candidates_oversize_whole_plate": 23,
+   "geometry_validity": {
+    "all_valid": true,
+    "n_invalid": 0,
+    "crs": "EPSG:3857"
+   },
+   "at_iou_0.3": {
+    "tp": 23,
+    "precision": 0.35384615384615387,
+    "recall": 0.45098039215686275
+   }
+  },
+  "easburn_buildings_vs_51_parcels__unet_builtup_raw": {
+   "n_pred": 26,
+   "n_ref": 51,
+   "tp": 0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "median_match_iou": null,
+   "median_best_iou": 0.0,
+   "median_boundary_dist_m": null,
+   "n_merge_flag": 2,
+   "n_split_flag": 0,
+   "n_oversize_flag": 6,
+   "n_ref_any_overlap": 20,
+   "note": "precision indicative only: candidates counted if inside parcels buffered 25 m or touching a parcel; parcels are positives-only, not exhaustive",
+   "n_candidates_whole_plate": 417,
+   "n_candidates_oversize_whole_plate": 81,
+   "geometry_validity": {
+    "all_valid": true,
+    "n_invalid": 0,
+    "crs": "EPSG:3857"
+   },
+   "at_iou_0.3": {
+    "tp": 0,
+    "precision": 0.0,
+    "recall": 0.0
+   }
+  },
+  "easburn_roads_vs_1776_philadelphia_road_graph": {
+   "n_pred": 771,
+   "pred_km": 32.62380369530556,
+   "n_ref": 254,
+   "ref_km": 41.349286160076296,
+   "offset_median_m_all_pred_points": 13.556032029357329,
+   "offset_p90_m_all_pred_points": 66.5387609019625,
+   "offset_median_m_pred_points_within_15m": 3.767807396501381,
+   "frac_pred_points_within_15m": 0.5209614660474458,
+   "correctness_within_tol": {
+    "3m": 0.22104697938849363,
+    "5m": 0.3110652695745088,
+    "8m": 0.393462548139846
+   },
+   "completeness_within_tol": {
+    "3m": 0.18368642979746383,
+    "5m": 0.26905429997918473,
+    "8m": 0.36043529227416377
+   },
+   "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound",
+   "geometry_validity": {
+    "all_valid": true,
+    "crs": "EPSG:3857"
+   }
+  },
+  "nyc_val_roads_vs_road_graph_all_edges": {
+   "n_pred": 58,
+   "pred_km": 3.9349857041819822,
+   "n_ref": 281,
+   "ref_km": 11.521155541595116,
+   "offset_median_m_all_pred_points": 4.871183933454688,
+   "offset_p90_m_all_pred_points": 22.24577485440481,
+   "offset_median_m_pred_points_within_15m": 3.98688599336908,
+   "frac_pred_points_within_15m": 0.8440555841482243,
+   "correctness_within_tol": {
+    "3m": 0.3129373375738945,
+    "5m": 0.5053558569373997,
+    "8m": 0.6483987309900444
+   },
+   "completeness_within_tol": {
+    "3m": 0.11202732777143452,
+    "5m": 0.18262554614922147,
+    "8m": 0.23896775564033257
+   },
+   "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound"
+  },
+  "nyc_val_roads_vs_road_graph_drawn_corridor_edges_only": {
+   "n_pred": 58,
+   "pred_km": 3.9349857041819822,
+   "n_ref": 78,
+   "ref_km": 3.1837915927360494,
+   "offset_median_m_all_pred_points": 5.515601975549793,
+   "offset_p90_m_all_pred_points": 49.30491690096208,
+   "offset_median_m_pred_points_within_15m": 3.54757517969283,
+   "frac_pred_points_within_15m": 0.7081832218219248,
+   "correctness_within_tol": {
+    "3m": 0.2946617981303866,
+    "5m": 0.46923957578746145,
+    "8m": 0.5636994203606893
+   },
+   "completeness_within_tol": {
+    "3m": 0.3711159572871192,
+    "5m": 0.5890717756450209,
+    "8m": 0.6976658398568045
+   },
+   "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound"
+  },
+  "nyc_val_buildings_vs_weak_labels": {
+   "n_pred": 3,
+   "n_ref": 359,
+   "tp": 0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "median_match_iou": null,
+   "median_best_iou": 0.0007159168509147774,
+   "median_boundary_dist_m": null,
+   "n_merge_flag": 336,
+   "n_split_flag": 0,
+   "n_oversize_flag": 336,
+   "n_ref_any_overlap": 352,
+   "note": "agreement with WEAK val labels (not pixel-traced), candidates inside val polygons buffered 25 m"
+  }
+ },
+ "outputs": {
+  "easburn_building_candidates.gpkg": {
+   "sha256": "38fb351cc929205cc45dd694c1e12e3ac9863f83e8f23bcc92e634a74d033aeb",
+   "rows": 1812,
+   "crs": "EPSG:3857",
+   "all_valid": true,
+   "n_empty": 0,
+   "geom_types": [
+    "Polygon"
+   ],
+   "origin": [
+    "machine_candidate_nyc_trained"
+   ]
+  },
+  "easburn_builtup_unet_candidates.gpkg": {
+   "sha256": "89cc5e85bd1af5f5fe515bffb2af4b107adff38bdca7d41fe307e4ed78a9ad84",
+   "rows": 417,
+   "crs": "EPSG:3857",
+   "all_valid": true,
+   "n_empty": 0,
+   "geom_types": [
+    "Polygon"
+   ],
+   "origin": [
+    "machine_candidate_nyc_trained"
+   ]
+  },
+  "easburn_road_candidates.gpkg": {
+   "sha256": "1169427b54dc37758b009c5374482309f1b67b67cc7c022810808846f5f2a44c",
+   "rows": 771,
+   "crs": "EPSG:3857",
+   "all_valid": true,
+   "n_empty": 0,
+   "geom_types": [
+    "LineString"
+   ],
+   "origin": [
+    "machine_candidate_nyc_trained"
+   ]
+  },
+  "nyc_fullplate_building_candidates.gpkg": {
+   "sha256": "cc72a0f3af247703e756ad15aadf7ff1cc843ecc676a8d5884e070538770e10c",
+   "rows": 61,
+   "crs": "EPSG:3857",
+   "all_valid": true,
+   "n_empty": 0,
+   "geom_types": [
+    "Polygon"
+   ],
+   "origin": [
+    "machine_candidate_nyc_trained"
+   ]
+  },
+  "nyc_fullplate_road_candidates.gpkg": {
+   "sha256": "e39c984f90d024018052b73876b3568c7f3d9604d91b51d5dc21692dca94cc97",
+   "rows": 548,
+   "crs": "EPSG:3857",
+   "all_valid": true,
+   "n_empty": 0,
+   "geom_types": [
+    "LineString"
+   ],
+   "origin": [
+    "machine_candidate_nyc_trained"
+   ]
+  }
+ },
+ "review_status": "No human review of candidates yet; interactive QGIS verification incomplete; nothing written to PostGIS or the QGIS project.",
+ "manifest_written_utc": "2026-09-10 22:40:06"
+}

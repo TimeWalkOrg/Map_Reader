@@ -1,0 +1,21 @@
+{
+ "n_components": 4220,
+ "n_blobs_after_filters": 1812,
+ "n_candidates": 1812,
+ "n_geosam_refined": 1704,
+ "geosam_seconds": 100.6,
+ "total_seconds": 103.4,
+ "filters": {
+  "area_m2": [
+   20,
+   6000
+  ],
+  "fill_min": 0.25,
+  "solidity_min": 0.55,
+  "close_px": 5,
+  "open_px": 5,
+  "road_gate": "unet roads prob>=0.5 dilated 2px"
+ },
+ "all_valid": true,
+ "crs": "EPSG:3857"
+}

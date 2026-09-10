@@ -1,0 +1,141 @@
+{
+ "easburn_buildings_vs_51_parcels__hybrid_instances": {
+  "n_pred": 65,
+  "n_ref": 51,
+  "tp": 22,
+  "precision": 0.3384615384615385,
+  "recall": 0.43137254901960786,
+  "f1": 0.3793103448275862,
+  "median_match_iou": 0.8548622927873523,
+  "median_best_iou": 0.2595607625428919,
+  "median_boundary_dist_m": 0.5780404250268439,
+  "n_merge_flag": 11,
+  "n_split_flag": 0,
+  "n_oversize_flag": 8,
+  "n_ref_any_overlap": 30,
+  "note": "precision indicative only: candidates counted if inside parcels buffered 25 m or touching a parcel; parcels are positives-only, not exhaustive",
+  "n_candidates_whole_plate": 1812,
+  "n_candidates_oversize_whole_plate": 23,
+  "geometry_validity": {
+   "all_valid": true,
+   "n_invalid": 0,
+   "crs": "EPSG:3857"
+  },
+  "at_iou_0.3": {
+   "tp": 23,
+   "precision": 0.35384615384615387,
+   "recall": 0.45098039215686275
+  }
+ },
+ "easburn_buildings_vs_51_parcels__unet_builtup_raw": {
+  "n_pred": 26,
+  "n_ref": 51,
+  "tp": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "median_match_iou": null,
+  "median_best_iou": 0.0,
+  "median_boundary_dist_m": null,
+  "n_merge_flag": 2,
+  "n_split_flag": 0,
+  "n_oversize_flag": 6,
+  "n_ref_any_overlap": 20,
+  "note": "precision indicative only: candidates counted if inside parcels buffered 25 m or touching a parcel; parcels are positives-only, not exhaustive",
+  "n_candidates_whole_plate": 417,
+  "n_candidates_oversize_whole_plate": 81,
+  "geometry_validity": {
+   "all_valid": true,
+   "n_invalid": 0,
+   "crs": "EPSG:3857"
+  },
+  "at_iou_0.3": {
+   "tp": 0,
+   "precision": 0.0,
+   "recall": 0.0
+  }
+ },
+ "easburn_roads_vs_1776_philadelphia_road_graph": {
+  "n_pred": 771,
+  "pred_km": 32.62380369530556,
+  "n_ref": 254,
+  "ref_km": 41.349286160076296,
+  "offset_median_m_all_pred_points": 13.556032029357329,
+  "offset_p90_m_all_pred_points": 66.5387609019625,
+  "offset_median_m_pred_points_within_15m": 3.767807396501381,
+  "frac_pred_points_within_15m": 0.5209614660474458,
+  "correctness_within_tol": {
+   "3m": 0.22104697938849363,
+   "5m": 0.3110652695745088,
+   "8m": 0.393462548139846
+  },
+  "completeness_within_tol": {
+   "3m": 0.18368642979746383,
+   "5m": 0.26905429997918473,
+   "8m": 0.36043529227416377
+  },
+  "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound",
+  "geometry_validity": {
+   "all_valid": true,
+   "crs": "EPSG:3857"
+  }
+ },
+ "nyc_val_roads_vs_road_graph_all_edges": {
+  "n_pred": 58,
+  "pred_km": 3.9349857041819822,
+  "n_ref": 281,
+  "ref_km": 11.521155541595116,
+  "offset_median_m_all_pred_points": 4.871183933454688,
+  "offset_p90_m_all_pred_points": 22.24577485440481,
+  "offset_median_m_pred_points_within_15m": 3.98688599336908,
+  "frac_pred_points_within_15m": 0.8440555841482243,
+  "correctness_within_tol": {
+   "3m": 0.3129373375738945,
+   "5m": 0.5053558569373997,
+   "8m": 0.6483987309900444
+  },
+  "completeness_within_tol": {
+   "3m": 0.11202732777143452,
+   "5m": 0.18262554614922147,
+   "8m": 0.23896775564033257
+  },
+  "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound"
+ },
+ "nyc_val_roads_vs_road_graph_drawn_corridor_edges_only": {
+  "n_pred": 58,
+  "pred_km": 3.9349857041819822,
+  "n_ref": 78,
+  "ref_km": 3.1837915927360494,
+  "offset_median_m_all_pred_points": 5.515601975549793,
+  "offset_p90_m_all_pred_points": 49.30491690096208,
+  "offset_median_m_pred_points_within_15m": 3.54757517969283,
+  "frac_pred_points_within_15m": 0.7081832218219248,
+  "correctness_within_tol": {
+   "3m": 0.2946617981303866,
+   "5m": 0.46923957578746145,
+   "8m": 0.5636994203606893
+  },
+  "completeness_within_tol": {
+   "3m": 0.3711159572871192,
+   "5m": 0.5890717756450209,
+   "8m": 0.6976658398568045
+  },
+  "note": "reference graphs omit alleys/minor lanes that the candidates include; correctness is therefore a lower bound"
+ },
+ "nyc_val_buildings_vs_weak_labels": {
+  "n_pred": 3,
+  "n_ref": 359,
+  "tp": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "median_match_iou": null,
+  "median_best_iou": 0.0007159168509147774,
+  "median_boundary_dist_m": null,
+  "n_merge_flag": 336,
+  "n_split_flag": 0,
+  "n_oversize_flag": 336,
+  "n_ref_any_overlap": 352,
+  "note": "agreement with WEAK val labels (not pixel-traced), candidates inside val polygons buffered 25 m"
+ }
+}
