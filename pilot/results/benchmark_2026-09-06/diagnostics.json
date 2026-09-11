@@ -1,0 +1,32 @@
+[
+  {
+    "block_id": "B1",
+    "dx_px": 13.115900456008035,
+    "dy_px": 4.643608652002797,
+    "response": 0.43260139544451676,
+    "displacement_m_utm": 4.289471498222932,
+    "note": "Local raster phase correlation, NOT building accuracy or independent georeferencing error",
+    "old_candidates": 13,
+    "new_candidates": 13
+  },
+  {
+    "block_id": "B2",
+    "dx_px": 16.667192272692432,
+    "dy_px": 3.659527385025058,
+    "response": 0.48010980802308384,
+    "displacement_m_utm": 5.262206707766583,
+    "note": "Local raster phase correlation, NOT building accuracy or independent georeferencing error",
+    "old_candidates": 8,
+    "new_candidates": 9
+  },
+  {
+    "block_id": "B3",
+    "dx_px": 14.845501052183465,
+    "dy_px": 3.951026770886017,
+    "response": 0.36780585967169865,
+    "displacement_m_utm": 4.737057418854943,
+    "note": "Local raster phase correlation, NOT building accuracy or independent georeferencing error",
+    "old_candidates": 3,
+    "new_candidates": 3
+  }
+]

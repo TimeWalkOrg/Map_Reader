@@ -1,0 +1,23 @@
+{
+  "B1": {
+    "complete": false,
+    "reviewed_by": "",
+    "reviewed_at": "",
+    "target": "map_trace",
+    "cog_sha256": "3e12f7496448aedd5a329c7f1de30156cb4060e7c6f3f836cadb237ea2342b20"
+  },
+  "B2": {
+    "complete": false,
+    "reviewed_by": "",
+    "reviewed_at": "",
+    "target": "map_trace",
+    "cog_sha256": "3e12f7496448aedd5a329c7f1de30156cb4060e7c6f3f836cadb237ea2342b20"
+  },
+  "B3": {
+    "complete": false,
+    "reviewed_by": "",
+    "reviewed_at": "",
+    "target": "map_trace",
+    "cog_sha256": "3e12f7496448aedd5a329c7f1de30156cb4060e7c6f3f836cadb237ea2342b20"
+  }
+}

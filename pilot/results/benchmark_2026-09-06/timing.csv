@@ -1,0 +1,7 @@
+block_id,workflow,reviewer,status,tracing_seconds,correction_seconds,review_seconds,clicks,notes
+B1,geosam_from_blank,,not_started,,,,,
+B1,batch_corrected,,not_started,,,,,
+B2,geosam_from_blank,,not_started,,,,,
+B2,batch_corrected,,not_started,,,,,
+B3,geosam_from_blank,,not_started,,,,,
+B3,batch_corrected,,not_started,,,,,

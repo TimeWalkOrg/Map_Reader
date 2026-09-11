@@ -3,10 +3,16 @@
 > **Training source update (2026-09-07):** Use Sunil’s 51 hand-drawn
 > `1776_philadelphia_building_parcels` from Easburn, **not Geo-SAM output**.
 > **Easburn v2 is the primary Philadelphia map.** Clarkson & Biddle
-> pipelines/results below are legacy comparisons, not the primary workflow.
-> Do not reuse their feature encodings or map-specific extents for Easburn.
+> scripts, results, and the Sept 6 benchmark below are legacy comparisons.
+> Their encodings/extents must not be reused for Easburn.
 > See [training selection and import status](training/README.md). This
 > supersedes the earlier Geo-SAM-to-training recommendation below.
+
+> **Current v2 batch workflow (2026-09-06):** See
+> [source-alignment fix and three-area review package](pilot/results/benchmark_2026-09-06/README.md).
+> Use `pilot/extract_candidates_v4.py` with a new output path. Older v3/v5
+> commands and committed results below remain v1 historical artifacts;
+> do not overlay them on v2 or replay their findings on v2.
 
 TimeWalk toolset for turning **georeferenced historical maps (COGs)** into
 **building footprints in PostGIS**, using SAM (Segment Anything) to accelerate
@@ -224,8 +230,8 @@ without a human clicking each building. That is the only route on this list to
 actual automation rather than acceleration. Cost of entry: it needs a **GPU** and
 a corpus of **annotated tiles** in the target map's drawing style. Both are
 reachable — PC-5090 has an RTX 5090, and the annotated tiles are exactly the
-manual annotation set supplied by Sunil (see `training/README.md`). His
-Geo-SAM output is excluded from the selected training data.
+by-product of doing an interactive Geo-SAM pass. That makes the two tools
+sequential rather than competing.
 
 ### 3. samgeo / segment-geospatial — *scriptable backbone*
 <https://github.com/opengeos/segment-geospatial> · docs <https://samgeo.gishub.org>
@@ -283,11 +289,11 @@ producing volume.
 | — | MapReader | corpus triage: which sheets are worth the effort | — |
 | — | mapKurator | attribute enrichment from map labels | — |
 
-**Current training direction (Sunil, 2026-09-07):** use the hand-drawn
-`1776_philadelphia_building_parcels` layer, not Geo-SAM output. First verify
-Easburn raster pairing, annotation coverage, and a spatial validation split;
-then assess whether the labels support a fine-tuning pilot. See
-[training selection](training/README.md). No training run has started.
+**The recommended sequence follows directly from that ranking:** run the
+interactive Geo-SAM pass now to get real footprints into PostGIS; keep every
+accepted polygon as a training pair; once enough have accumulated, fine-tune
+MapSAM on PC-5090's RTX 5090 using those pairs and move to prompt-free batch
+extraction; keep samgeo as the scripted layer that runs and scores both.
 
 ## Repo layout
 

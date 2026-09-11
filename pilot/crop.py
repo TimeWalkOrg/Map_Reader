@@ -10,7 +10,7 @@ import json
 import rasterio
 from rasterio.windows import from_bounds
 
-COG = "/Users/gabriel/NYC_Maps/maps/tw_1762_philadelphia_map_clarkson_biddle_cog.tif"
+from source_config import COG
 GT = "ground_truth.geojson"
 OUT = "crop_1762_core.tif"
 PAD = 80.0  # metres (EPSG:3857)

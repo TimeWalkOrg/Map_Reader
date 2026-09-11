@@ -33,10 +33,6 @@ from geosam.runtime import (
 )
 
 HERE = Path(__file__).parent
-COG = Path(
-    "/Users/gabriel/.openclaw/workspace-timewalker/philly_georef_work/cb_v2/"
-    "tw_1762_philadelphia_map_clarkson_biddle_v2_cog.tif"
-)
 CHECKPOINT = HERE / "models" / "sam_b.pt"
 MODEL_ID = "sam_b"
 # Output layer folder name = sanitized raster layer name, exactly what the
@@ -49,6 +45,7 @@ CHIP_SIZE = 1024
 # /8 overview of the v1 COG; v2 COG is pinned to the same grid).
 sys.path.insert(0, str(HERE.parent / "pilot"))
 import batch_common  # noqa: E402
+from source_config import COG  # noqa: E402
 
 
 def main() -> None:

@@ -34,3 +34,6 @@ pilot/results/audit_v5/tiles/
 geo-sam/env/
 geo-sam/models/
 geo-sam/features_*/
+
+# Geo-SAM feature packages (500-800 MB) — published as Gitea releases, not tracked here
+geo-sam/*.zip

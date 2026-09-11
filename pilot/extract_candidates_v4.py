@@ -47,6 +47,11 @@ Output: pilot/results/candidates_v4.gpkg (EPSG:3857)
 
 Run:  env/bin/python pilot/extract_candidates_v4.py   (~1 min)
 """
+import argparse
+import json
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
 import os
 import sys
 import time
@@ -62,9 +67,10 @@ from shapely.strtree import STRtree
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import batch_common as bc
+from source_config import COG, sha256
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                   "results", "candidates_v4.gpkg")
+                   "results", "candidates_v4_v2.gpkg")
 
 STRIDE = 2048
 MARGIN = 192
@@ -492,8 +498,39 @@ def grid_theta_from(records):
 # main
 # ----------------------------------------------------------------------------
 def main():
+    global OUT
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--cog', type=Path, default=COG)
+    ap.add_argument('--out', type=Path, default=Path(OUT))
+    ap.add_argument('--carry-from', type=Path, help='Optional v3 output with matching source provenance')
+    args = ap.parse_args()
+    OUT = str(args.out.resolve())
+    if args.out.exists() or args.out.with_suffix('.manifest.json').exists():
+        ap.error('Output already exists; choose a new output path (historical outputs are immutable).')
     t0 = time.time()
-    src = rasterio.open(bc.COG)
+    source_hash = sha256(args.cog)
+    if args.carry_from:
+        previous = json.loads(args.carry_from.with_suffix('.manifest.json').read_text())
+        if previous.get('cog_sha256') != source_hash:
+            ap.error('Carry-over raster hash does not match the extraction source.')
+        if previous.get('output_sha256') != sha256(args.carry_from):
+            ap.error('Carry-over file does not match its manifest.')
+    manifest = dict(run_id=str(uuid.uuid4()), run_ts=datetime.now(timezone.utc).isoformat(),
+                    source_map=args.cog.name, cog_sha256=source_hash,
+                    extractor_version='v4-v2-source-safe',
+                    code_sha256={name: sha256(Path(__file__).with_name(name)) for name in
+                                 ('extract_candidates_v4.py', 'batch_common.py', 'source_config.py')},
+                    carry_from=str(args.carry_from) if args.carry_from else None,
+                    reviewed=False)
+    src = rasterio.open(args.cog)
+    if src.crs.to_epsg() != 3857:
+        ap.error('This map-specific extractor requires EPSG:3857.')
+    # The core polygon and morphology were calibrated to this particular grid.
+    expected = rasterio.Affine(0.401897733157307, 0, -8366728.803119021,
+                              0, -0.401897733157307, 4860365.386169895)
+    if src.shape != (11950, 9575) or not src.transform.almost_equals(expected):
+        ap.error('Unsupported raster grid: recalibrate the pixel-space core and morphology first.')
+    manifest.update(crs=src.crs.to_string(), transform=list(src.transform), shape=list(src.shape))
     core_old = bc.load_core_poly(src)
     tiles = list(bc.iter_tiles(src, core_old, STRIDE, MARGIN))
     print(f"{len(tiles)} tiles (stride {STRIDE}px, margin {MARGIN}px)",
@@ -764,9 +801,9 @@ def main():
     # flagged reg_method='v3carry'. These are a handful of borderline
     # curved-row / low-hatch cases where v4's stricter piece handling
     # dropped what v3 kept.
-    v3_path = os.path.join(os.path.dirname(OUT), "candidates_v3.gpkg")
+    v3_path = str(args.carry_from) if args.carry_from else None
     n_carry = 0
-    if os.path.exists(v3_path):
+    if v3_path:
         prev = gpd.read_file(v3_path, layer="candidates")
         out_geoms = ([r['geometry'] for r in cands]
                      + [r['geometry'] for r in blocks])
@@ -794,6 +831,8 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     if os.path.exists(OUT):
         os.remove(OUT)
+    for rec in cands + blocks:
+        rec.update({k: manifest[k] for k in ('run_id', 'source_map', 'cog_sha256', 'extractor_version', 'reviewed')})
     gpd.GeoDataFrame(cands, crs=src.crs).to_file(
         OUT, driver="GPKG", layer="candidates")
     if blocks:
@@ -801,6 +840,10 @@ def main():
             OUT, driver="GPKG", layer="oversize_blocks")
     gpd.GeoDataFrame({'geometry': [core]}, crs=src.crs).to_file(
         OUT, driver="GPKG", layer="core_v4")
+    manifest.update(candidate_count=len(cands), oversize_count=len(blocks),
+                    elapsed_seconds=time.time()-t0, output_sha256=sha256(OUT))
+    Path(OUT).with_suffix('.manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    src.close()
     print(f"wrote {OUT}: {len(cands)} candidates + {len(blocks)} oversize "
           f"blocks; clamped {n_clamped}; rejected {n_rej}; "
           f"total {time.time()-t0:.1f}s", flush=True)
